@@ -3,147 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fully Alive Shepherd | Kingdom Shepherds</title>
+    <title>Fully Alive Entrepreneur | I Build To Steward</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;1,400&family=Inter:wght@300;400;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .baskerville { font-family: 'Libre Baskerville', serif; }
-        .bg-shepherd {
-            background: linear-gradient(rgba(255, 251, 235, 0.96), rgba(255, 251, 235, 0.96)), 
-                        url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80&w=2070');
-            background-size: cover;
+        .cinzel { font-family: 'Cinzel', serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover; background-position: center;
         }
-        .clarified-box { border: 2px solid #f59e0b; background-color: #fff; }
+        .cta-glow { box-shadow: 0 0 30px rgba(251, 191, 36, 0.3); }
     </style>
 </head>
-<body class="bg-amber-50 text-slate-900">
+<body class="bg-slate-950 text-white">
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-xl border-b border-amber-100 h-20 flex items-center">
+    <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-xl border-b border-white/10 h-20 flex items-center">
         <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
-            <a href="index.html" class="text-xl font-black uppercase tracking-tighter">FULLY<span class="text-amber-500">ALIVE</span> <span class="text-xs text-amber-600 ml-2 uppercase font-bold tracking-widest">Shepherd</span></a>
-            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-500">
-                <a href="index.html" class="hover:text-amber-600">Hub</a>
-                <a href="#rebirth" class="hover:text-amber-600">Rebirth Vision</a>
-                <a href="#pilot" class="hover:text-amber-600">Pilot Pricing</a>
-                <a href="marketplace.html" class="bg-slate-900 px-4 py-2 rounded-lg text-white">Switch to Entrepreneur</a>
+            <a href="index.html" class="text-xl font-black uppercase tracking-tighter">FULLY<span class="text-amber-500">ALIVE</span></a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="bg-white/5 hover:bg-white/10 px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all"><i class="fas fa-home mr-2"></i> Return to Hub</a>
+                <a href="kingdom.html" class="bg-amber-500/10 text-amber-500 border border-amber-500/20 px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all">Shepherd Track</a>
             </div>
         </div>
     </nav>
 
-    <section class="bg-shepherd min-h-screen flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <!-- High Impact Marketing Hero -->
+    <section class="hero-bg min-h-screen flex items-center pt-20 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <div>
-                <span class="text-amber-600 font-bold uppercase tracking-[0.4em] text-xs mb-6 block">The Kingdom Shepherd</span>
-                <h1 class="text-5xl lg:text-7xl font-bold baskerville mb-8 leading-tight text-slate-900">I Lead To <br><span class="italic text-amber-600 underline decoration-amber-200">Rebirth.</span></h1>
-                <p class="text-xl text-slate-600 mb-12 leading-relaxed">HOPE 2.0 Turnaround. Moving from silence to celebration. Transforming your church into a marketplace ministry engine.</p>
-                <a href="#pilot" class="bg-slate-900 text-white px-10 py-4 rounded-xl font-bold shadow-xl shadow-slate-900/20">Apply for Pilot Cohort</a>
+                <span class="text-amber-500 font-bold uppercase tracking-[0.4em] text-xs mb-6 block">The Marketplace Architect</span>
+                <h1 class="text-6xl lg:text-8xl font-bold cinzel mb-8 leading-tight">I Build To <br><span class="text-amber-500 underline decoration-amber-500/30">Steward.</span></h1>
+                <p class="text-xl text-slate-400 mb-10 leading-relaxed max-w-lg">Scaling from "Good (Man)" to "Great (God)." Shifting your business from a place of conquest to a field of Kingdom distribution.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#tiers" class="bg-amber-500 text-slate-950 px-10 py-5 rounded-xl font-black uppercase tracking-widest cta-glow text-center hover:bg-white transition-all">Enroll in Mentorship</a>
+                    <a href="#5ws" class="border border-slate-700 px-10 py-5 rounded-xl font-bold text-center hover:bg-slate-900 transition-all">Explore the Framework</a>
+                </div>
             </div>
-            <div id="rebirth" class="bg-white border-2 border-amber-100 p-10 rounded-[3rem] shadow-xl">
-                <h3 class="baskerville text-2xl text-amber-600 mb-8 border-b border-amber-50 pb-4">The Shepherd 5Ws</h3>
-                <div class="space-y-6">
-                    <div class="flex items-start gap-4">
-                        <i class="fas fa-seedling text-amber-500 mt-1"></i>
-                        <div><h5 class="font-bold text-sm text-slate-900">Worship</h5><p class="text-xs text-slate-500">Moving from church performance to authentic encounter.</p></div>
+            <div class="hidden lg:block">
+                <div class="bg-slate-900/50 backdrop-blur-xl border border-slate-700 p-12 rounded-[3rem] shadow-2xl relative">
+                    <div class="absolute -top-6 -left-6 bg-amber-500 p-4 rounded-2xl text-slate-950 shadow-xl">
+                        <i class="fas fa-quote-left text-2xl"></i>
                     </div>
-                    <div class="flex items-start gap-4">
-                        <i class="fas fa-arrows-to-circle text-amber-600 mt-1"></i>
-                        <div><h5 class="font-bold text-sm text-slate-900">Work</h5><p class="text-xs text-slate-500">Equipping congregants for 10X work potential.</p></div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <i class="fas fa-infinity text-slate-900 mt-1"></i>
-                        <div><h5 class="font-bold text-sm text-slate-900">Wealth</h5><p class="text-xs text-slate-500">Sustainable future tithing via flourishing members.</p></div>
+                    <p class="text-3xl font-light italic text-slate-200 leading-relaxed">"I will order your steps; David loved Saul, I made him King!"</p>
+                    <div class="mt-8 pt-8 border-t border-slate-800 flex items-center gap-4">
+                        <div class="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center text-amber-500">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-sm font-bold">The 2025 Pivot Word</h5>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-widest">Accepting Kingdom Assignments</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Clarified Pilot Pricing -->
-    <section id="pilot" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
-            <h2 class="text-4xl font-bold baskerville">Pilot Cohort Investment</h2>
-            <p class="text-slate-500 mt-4">Shared Stewardship: How the Church & Leader invest together.</p>
-        </div>
-        
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Tier 1 -->
-            <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col justify-between hover:shadow-lg transition-all">
-                <div>
-                    <h4 class="font-bold text-slate-900 mb-2">Peer Pilot</h4>
-                    <p class="text-xs text-slate-500 mb-6 italic">Deacons, Elders, Shepherds</p>
-                    <div class="text-slate-400 text-xs line-through mb-1">Retail: $397 / mo</div>
-                    <div class="text-3xl font-black text-amber-600 mb-4">$159<span class="text-sm font-normal text-slate-400">/mo</span></div>
+    <!-- Interactive 5Ws (Supporting Context) -->
+    <section id="5ws" class="py-24 bg-slate-900/50 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold cinzel text-center mb-12">The 5W Engine</h2>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+                <div class="p-6 bg-slate-950 rounded-2xl border border-slate-800 text-center">
+                    <i class="fas fa-pray text-amber-500 mb-4 block"></i>
+                    <h5 class="font-bold text-xs uppercase mb-2">Worship</h5>
+                    <p class="text-[10px] text-slate-500">Fear of the Lord over ROI.</p>
                 </div>
-                <div class="pt-6 border-t border-slate-200">
-                    <p class="text-[10px] uppercase font-bold text-slate-400 mb-2">Stewardship Split</p>
-                    <div class="flex justify-between text-xs mb-1"><span>Church Pays (60%)</span><span class="font-bold">$238</span></div>
-                    <div class="flex justify-between text-xs text-amber-600 font-bold"><span>Leader Pays (40%)</span><span>$159</span></div>
+                <div class="p-6 bg-slate-950 rounded-2xl border border-slate-800 text-center">
+                    <i class="fas fa-briefcase text-blue-500 mb-4 block"></i>
+                    <h5 class="font-bold text-xs uppercase mb-2">Work</h5>
+                    <p class="text-[10px] text-slate-500">Excellence as Ministry.</p>
                 </div>
-            </div>
-
-            <!-- Tier 2 -->
-            <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col justify-between hover:shadow-lg transition-all">
-                <div>
-                    <h4 class="font-bold text-slate-900 mb-2">Circle Pilot</h4>
-                    <p class="text-xs text-slate-500 mb-6 italic">Ministry Staff & Leads</p>
-                    <div class="text-slate-400 text-xs line-through mb-1">Retail: $795 / mo</div>
-                    <div class="text-3xl font-black text-amber-600 mb-4">$238<span class="text-sm font-normal text-slate-400">/mo</span></div>
+                <div class="p-6 bg-slate-950 rounded-2xl border border-slate-800 text-center">
+                    <i class="fas fa-coins text-emerald-500 mb-4 block"></i>
+                    <h5 class="font-bold text-xs uppercase mb-2">Wealth</h5>
+                    <p class="text-[10px] text-slate-500">Stewardship for Mission.</p>
                 </div>
-                <div class="pt-6 border-t border-slate-200">
-                    <p class="text-[10px] uppercase font-bold text-slate-400 mb-2">Stewardship Split</p>
-                    <div class="flex justify-between text-xs mb-1"><span>Church Pays (70%)</span><span class="font-bold">$557</span></div>
-                    <div class="flex justify-between text-xs text-amber-600 font-bold"><span>Leader Pays (30%)</span><span>$238</span></div>
+                <div class="p-6 bg-slate-950 rounded-2xl border border-slate-800 text-center">
+                    <i class="fas fa-lightbulb text-purple-500 mb-4 block"></i>
+                    <h5 class="font-bold text-xs uppercase mb-2">Wisdom</h5>
+                    <p class="text-[10px] text-slate-500">Prophetic Ordered Steps.</p>
+                </div>
+                <div class="p-6 bg-slate-950 rounded-2xl border border-slate-800 text-center">
+                    <i class="fas fa-heart text-rose-500 mb-4 block"></i>
+                    <h5 class="font-bold text-xs uppercase mb-2">Wellness</h5>
+                    <p class="text-[10px] text-slate-500">Resilient Sustainability.</p>
                 </div>
             </div>
-
-            <!-- Tier 3 -->
-            <div class="clarified-box p-8 rounded-3xl flex flex-col justify-between scale-105 shadow-2xl relative">
-                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-500 text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Recommended</span>
-                <div>
-                    <h4 class="font-bold text-slate-900 mb-2">Executive Pilot</h4>
-                    <p class="text-xs text-slate-500 mb-6 italic">Senior Pastors & CEOs</p>
-                    <div class="text-slate-400 text-xs line-through mb-1">Retail: $2,400 / mo</div>
-                    <div class="text-3xl font-black text-amber-600 mb-4">$480<span class="text-sm font-normal text-slate-400">/mo</span></div>
-                </div>
-                <div class="pt-6 border-t border-slate-200">
-                    <p class="text-[10px] uppercase font-bold text-slate-400 mb-2">Stewardship Split</p>
-                    <div class="flex justify-between text-xs mb-1"><span>Church Pays (80%)</span><span class="font-bold">$1,920</span></div>
-                    <div class="flex justify-between text-xs text-amber-600 font-bold"><span>Leader Pays (20%)</span><span>$480</span></div>
-                </div>
-            </div>
-
-            <!-- Tier 4 -->
-            <div class="bg-slate-900 text-white p-8 rounded-3xl border border-slate-800 flex flex-col justify-between hover:shadow-lg transition-all">
-                <div>
-                    <h4 class="font-bold text-white mb-2">Kings Court</h4>
-                    <p class="text-xs text-slate-400 mb-6 italic">Elite Stewardship Covenant</p>
-                    <div class="text-slate-500 text-xs line-through mb-1">Retail: $1,067 / mo</div>
-                    <div class="text-3xl font-black text-amber-500 mb-4">$267<span class="text-sm font-normal text-slate-500">/mo</span></div>
-                </div>
-                <div class="pt-6 border-t border-slate-700">
-                    <p class="text-[10px] uppercase font-bold text-slate-500 mb-2">Stewardship Split</p>
-                    <div class="flex justify-between text-xs mb-1"><span>Church Pays (75%)</span><span class="font-bold">$800</span></div>
-                    <div class="flex justify-between text-xs text-amber-500 font-bold"><span>Leader Pays (25%)</span><span>$267</span></div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="max-w-2xl mx-auto mt-16 p-8 bg-amber-100/50 rounded-2xl border border-amber-200 text-center">
-            <h5 class="font-bold mb-4">Pilot Cohort Snapshot</h5>
-            <p class="text-sm text-slate-700 mb-4">Average 12 leaders per cohort over 4 months.</p>
-            <p class="text-sm text-slate-900 font-bold">Total Church Investment: Avg $5,498 / month</p>
-            <button onclick="hubspotSubmit('Pilot Inquiry')" class="mt-8 w-full bg-slate-900 text-white py-4 rounded-xl font-bold">Request Full Pilot Proposal</button>
         </div>
     </section>
 
-    <script>
-        function hubspotSubmit(tier) {
-            console.log("Submitting to HubSpot: Shepherd Track - " + tier);
-            alert("Your Pilot Inquiry for " + tier + " has been sent to our CRM. A team member will reach out to discuss the stewardship split with your elders.");
-        }
-    </script>
+    <!-- Pricing Tiers -->
+    <section id="tiers" class="py-24 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Peer Group -->
+                <div class="bg-slate-900 p-10 rounded-3xl border border-slate-800 flex flex-col hover:border-amber-500 transition-all">
+                    <h3 class="text-xl font-bold mb-2">Peer Group</h3>
+                    <p class="text-4xl font-black mb-8">$397<span class="text-sm font-normal text-slate-500">/mo</span></p>
+                    <ul class="text-sm space-y-4 text-slate-400 mb-10 flex-grow">
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i> Weekly Group T.R.A.I.N. Call</li>
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i> Monthly 4-hr Retreat</li>
+                    </ul>
+                    <button class="w-full py-4 rounded-xl border border-white font-bold hover:bg-white hover:text-slate-950 transition-all">Enroll Now</button>
+                </div>
+                <!-- Circle -->
+                <div class="bg-amber-500 text-slate-950 p-10 rounded-3xl scale-105 shadow-2xl flex flex-col relative">
+                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-slate-950 text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase">Popular</span>
+                    <h3 class="text-xl font-bold mb-2">Leadership Circle</h3>
+                    <p class="text-4xl font-black mb-8">$697<span class="text-sm font-normal text-amber-900">/mo</span></p>
+                    <ul class="text-sm space-y-4 text-amber-950 mb-10 flex-grow font-semibold">
+                        <li><i class="fas fa-check mr-2"></i> Light 1:1 Monthly Access</li>
+                        <li><i class="fas fa-check mr-2"></i> Distribution Strategy Map</li>
+                    </ul>
+                    <button class="w-full py-4 rounded-xl bg-slate-950 text-white font-bold">Enroll Now</button>
+                </div>
+                <!-- Exec -->
+                <div class="bg-slate-900 p-10 rounded-3xl border border-slate-800 flex flex-col hover:border-amber-500 transition-all">
+                    <h3 class="text-xl font-bold mb-2">Executive 1:1</h3>
+                    <p class="text-4xl font-black mb-8">$1,497<span class="text-sm font-normal text-slate-500">/mo</span></p>
+                    <ul class="text-sm space-y-4 text-slate-400 mb-10 flex-grow">
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i> Weekly 1:1 Strategy</li>
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i> Legacy Vision Design</li>
+                    </ul>
+                    <button class="w-full py-4 rounded-xl border border-white text-white font-bold hover:bg-white hover:text-slate-950 transition-all">Request Invite</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center border-t border-white/5">
+        <a href="index.html" class="text-slate-600 hover:text-amber-500 text-[10px] uppercase font-bold tracking-widest transition-all">Back to Home</a>
+    </footer>
+
 </body>
 </html>
 
