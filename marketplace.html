@@ -3,61 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fully Alive Entrepreneur | I Build To Steward</title>
+    <title>Entrepreneur Track | FULLY ALIVE: @WORK @HOME @CHURCH</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@300;400;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #020617; }
         .cinzel { font-family: 'Cinzel', serif; }
         .hero-bg {
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
                         url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070');
             background-size: cover; background-position: center;
         }
-        .cta-glow { box-shadow: 0 0 30px rgba(251, 191, 36, 0.3); }
-        .framework-module { transition: all 0.3s ease; }
-        .framework-module:hover { background: rgba(251, 191, 36, 0.05); border-color: rgba(251, 191, 36, 0.4); }
+        .cta-glow { box-shadow: 0 0 50px rgba(251, 191, 36, 0.4); }
     </style>
 </head>
-<body class="bg-slate-950 text-white selection:bg-amber-500 selection:text-slate-950">
+<body class="text-white selection:bg-amber-500 selection:text-slate-950">
 
-    <!-- Header Navigation -->
-    <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-xl border-b border-white/10 h-20 flex items-center">
+    <nav class="fixed w-full z-50 bg-slate-950/90 backdrop-blur-2xl border-b border-white/10 h-24 flex items-center">
         <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
-            <a href="index.html" class="text-xl font-black uppercase tracking-tighter">FULLY<span class="text-amber-500">ALIVE</span></a>
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="index.html" class="bg-white/5 hover:bg-white/10 px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all"><i class="fas fa-home mr-2"></i> Hub</a>
-                <a href="kingdom.html" class="bg-amber-500/10 text-amber-500 border border-amber-500/20 px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all">Shepherd Track</a>
+            <div class="flex flex-col">
+                <a href="index.html" class="text-2xl font-black uppercase tracking-tighter leading-none">FULLY<span class="text-amber-500">ALIVE</span></a>
+                <span class="text-[10px] text-amber-500/80 font-black tracking-[0.4em] uppercase mt-1">@WORK @HOME @CHURCH</span>
+            </div>
+            <div class="flex items-center space-x-8">
+                <a href="index.html" class="bg-white/5 hover:bg-white/10 px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all border border-white/5"><i class="fas fa-home mr-3"></i> Hub</a>
+                <a href="kingdom.html" class="hidden md:block bg-amber-500/10 text-amber-500 border border-amber-500/20 px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all">Shepherd Track</a>
             </div>
         </div>
     </nav>
 
-    <!-- High Impact Marketing Hero -->
-    <section class="hero-bg min-h-screen flex items-center pt-20 px-6">
+    <!-- Founder Hero -->
+    <section class="hero-bg min-h-screen flex items-center pt-24 px-6">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <div>
-                <span class="text-amber-500 font-bold uppercase tracking-[0.4em] text-xs mb-6 block">The Marketplace Architect</span>
-                <h1 class="text-6xl lg:text-8xl font-bold cinzel mb-8 leading-tight">I Build To <br><span class="text-amber-500 underline decoration-amber-500/30">Steward.</span></h1>
-                <p class="text-xl text-slate-400 mb-10 leading-relaxed max-w-lg">Scaling from "Good" to "Great." Shift your business from a place of conquest to a field of Kingdom distribution. Move from Fear of Man to Fear of the Lord.</p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#tiers" class="bg-amber-500 text-slate-950 px-10 py-5 rounded-xl font-black uppercase tracking-widest cta-glow text-center hover:bg-white transition-all">Enroll in Mentorship</a>
-                    <a href="#5ws" class="border border-slate-700 px-10 py-5 rounded-xl font-bold text-center hover:bg-slate-900 transition-all">The OS Framework</a>
+                <div class="flex items-center gap-6 mb-10">
+                    <div class="h-[2px] w-16 bg-amber-500/50"></div>
+                    <span class="text-amber-500 font-black uppercase tracking-[0.6em] text-[11px]">The Founder's Journey</span>
+                </div>
+                <h1 class="text-7xl lg:text-[10rem] font-black cinzel mb-10 leading-[0.85] tracking-tighter">
+                    I BUILD TO <br><span class="text-amber-500">STEWARD.</span>
+                </h1>
+                <p class="text-2xl md:text-3xl text-slate-300 mb-12 leading-relaxed max-w-xl font-light">
+                    Scaling from "Good" to "Great." Shifting the ROI of your life toward eternal Kingdom distribution.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="#tiers" class="bg-amber-500 text-slate-950 px-16 py-7 rounded-3xl font-black uppercase tracking-[0.2em] cta-glow text-center hover:bg-white transition-all transform hover:-translate-y-2">Enroll in Mentorship</a>
+                    <a href="#5ws" class="bg-slate-900 border border-slate-700 px-16 py-7 rounded-3xl font-black text-center hover:bg-slate-800 transition-all uppercase tracking-[0.2em] text-sm">The OS Framework</a>
                 </div>
             </div>
-            <div class="hidden lg:block">
-                <div class="bg-slate-900/50 backdrop-blur-xl border border-slate-700 p-12 rounded-[3rem] shadow-2xl relative">
-                    <div class="absolute -top-6 -left-6 bg-amber-500 p-4 rounded-2xl text-slate-950 shadow-xl">
-                        <i class="fas fa-quote-left text-2xl"></i>
-                    </div>
-                    <p class="text-3xl font-light italic text-slate-200 leading-relaxed">"I will order your steps; David loved Saul, I made him King!"</p>
-                    <div class="mt-8 pt-8 border-t border-slate-800 flex items-center gap-4">
-                        <div class="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center text-amber-500">
+            <div class="hidden lg:block relative">
+                <div class="bg-slate-900/40 backdrop-blur-3xl border border-white/10 p-20 rounded-[5rem] shadow-2xl relative overflow-hidden">
+                    <div class="absolute -top-20 -right-20 text-amber-500/5 text-[25rem] cinzel font-black">RA</div>
+                    <p class="text-5xl font-light italic text-white leading-relaxed relative z-10">"I will order your steps; David loved Saul, I made him King!"</p>
+                    <div class="mt-16 pt-16 border-t border-white/10 flex items-center gap-8 relative z-10">
+                        <div class="w-20 h-20 bg-amber-500 rounded-3xl flex items-center justify-center text-slate-950 text-3xl shadow-2xl shadow-amber-500/30">
                             <i class="fas fa-bolt"></i>
                         </div>
                         <div>
-                            <h5 class="text-sm font-bold">The Pivot Word</h5>
-                            <p class="text-[10px] text-slate-500 uppercase tracking-widest">Abandoning Engineered Problems</p>
+                            <h5 class="text-xl font-bold cinzel tracking-[0.3em]">THE PIVOT WORD</h5>
+                            <p class="text-xs text-slate-500 uppercase tracking-[0.4em] font-black mt-2">Abandoning Engineered Problems</p>
                         </div>
                     </div>
                 </div>
@@ -65,105 +70,102 @@
         </div>
     </section>
 
-    <!-- Compact 5W Operating System Section -->
-    <section id="5ws" class="py-24 bg-slate-900/50 border-y border-white/5">
+    <!-- Compact Founder OS (5Ws) -->
+    <section id="5ws" class="py-32 bg-slate-900 border-y border-white/10 px-6">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
-                <div class="max-w-xl">
-                    <h2 class="text-4xl font-bold cinzel mb-4">The Founder's OS</h2>
-                    <p class="text-slate-500 text-lg">Five integrated modules to operationalize your faith and scale your impact.</p>
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-12">
+                <div class="max-w-3xl">
+                    <h2 class="text-5xl md:text-6xl font-black cinzel mb-8">The Founder's OS</h2>
+                    <p class="text-slate-400 text-2xl font-light leading-relaxed">Integrated modules to operationalize your life across <br><span class="text-white font-black tracking-widest">@WORK @HOME @CHURCH</span></p>
                 </div>
-                <div class="bg-slate-950 border border-slate-800 p-4 rounded-2xl flex items-center gap-6">
+                <div class="bg-slate-950 border border-white/10 p-8 rounded-[2.5rem] flex items-center gap-12 shadow-2xl">
                     <div class="text-center">
-                        <span class="block text-amber-500 text-xl font-black">10X</span>
-                        <span class="text-[8px] uppercase tracking-widest font-bold text-slate-500">Alignment</span>
+                        <span class="block text-amber-500 text-4xl font-black mb-2">10X</span>
+                        <span class="text-[10px] uppercase tracking-[0.4em] font-black text-slate-500">Alignment</span>
                     </div>
-                    <div class="w-px h-8 bg-slate-800"></div>
+                    <div class="w-px h-16 bg-white/10"></div>
                     <div class="text-center">
-                        <span class="block text-white text-xl font-black">0</span>
-                        <span class="text-[8px] uppercase tracking-widest font-bold text-slate-500">Burnout</span>
+                        <span class="block text-white text-4xl font-black mb-2">ZERO</span>
+                        <span class="text-[10px] uppercase tracking-[0.4em] font-black text-slate-500">Burnout</span>
                     </div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
-                <div class="framework-module p-6 bg-slate-950 rounded-2xl border border-slate-800">
-                    <span class="text-[10px] font-black text-amber-500/50 uppercase tracking-[0.2em] mb-4 block">01 / Worship</span>
-                    <h4 class="font-bold text-base mb-2">Boardroom Authority</h4>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">Fear of the Lord over ROI. Seeking divine alignment before quarterly performance.</p>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-5">
+                <div class="group p-10 bg-slate-950 rounded-[3rem] border border-white/5 hover:border-amber-500 transition-all">
+                    <span class="text-[11px] font-black text-amber-500/40 uppercase tracking-[0.5em] mb-8 block group-hover:text-amber-500">Module 01</span>
+                    <h4 class="font-black text-xl cinzel mb-4 tracking-widest uppercase">Worship</h4>
+                    <p class="text-[12px] text-slate-500 leading-relaxed font-black uppercase tracking-widest">Boardroom Authority via Fear of the Lord over ROI.</p>
                 </div>
-                <div class="framework-module p-6 bg-slate-950 rounded-2xl border border-slate-800">
-                    <span class="text-[10px] font-black text-blue-500/50 uppercase tracking-[0.2em] mb-4 block">02 / Work</span>
-                    <h4 class="font-bold text-base mb-2">Monday as Mission</h4>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">Operational excellence as a primary act of worship and marketplace witness.</p>
+                <div class="group p-10 bg-slate-950 rounded-[3rem] border border-white/5 hover:border-blue-500 transition-all">
+                    <span class="text-[11px] font-black text-blue-500/40 uppercase tracking-[0.5em] mb-8 block group-hover:text-blue-500">Module 02</span>
+                    <h4 class="font-black text-xl cinzel mb-4 tracking-widest uppercase">Work</h4>
+                    <p class="text-[12px] text-slate-500 leading-relaxed font-black uppercase tracking-widest">Operational excellence as a primary act of ministry.</p>
                 </div>
-                <div class="framework-module p-6 bg-slate-950 rounded-2xl border border-slate-800">
-                    <span class="text-[10px] font-black text-emerald-500/50 uppercase tracking-[0.2em] mb-4 block">03 / Wealth</span>
-                    <h4 class="font-bold text-base mb-2">Distribution Engine</h4>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">Shift from building barns to funding the King’s harvest via $1M Trade Surging.</p>
+                <div class="group p-10 bg-slate-950 rounded-[3rem] border border-white/5 hover:border-emerald-500 transition-all">
+                    <span class="text-[11px] font-black text-emerald-500/40 uppercase tracking-[0.5em] mb-8 block group-hover:text-emerald-500">Module 03</span>
+                    <h4 class="font-black text-xl cinzel mb-4 tracking-widest uppercase">Wealth</h4>
+                    <p class="text-[12px] text-slate-500 leading-relaxed font-black uppercase tracking-widest">Distribution Engine via 10X Kingdom Gain Strategy.</p>
                 </div>
-                <div class="framework-module p-6 bg-slate-950 rounded-2xl border border-slate-800">
-                    <span class="text-[10px] font-black text-purple-500/50 uppercase tracking-[0.2em] mb-4 block">04 / Wisdom</span>
-                    <h4 class="font-bold text-base mb-2">Prophetic Steps</h4>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">Using Biblical Intelligence (BI) to navigate high-stakes founder decisions.</p>
+                <div class="group p-10 bg-slate-950 rounded-[3rem] border border-white/5 hover:border-purple-500 transition-all">
+                    <span class="text-[11px] font-black text-purple-500/40 uppercase tracking-[0.5em] mb-8 block group-hover:text-purple-500">Module 04</span>
+                    <h4 class="font-black text-xl cinzel mb-4 tracking-widest uppercase">Wisdom</h4>
+                    <p class="text-[12px] text-slate-500 leading-relaxed font-black uppercase tracking-widest">Navigating high-stakes with Prophetic Ordered Steps.</p>
                 </div>
-                <div class="framework-module p-6 bg-slate-950 rounded-2xl border border-slate-800">
-                    <span class="text-[10px] font-black text-rose-500/50 uppercase tracking-[0.2em] mb-4 block">05 / Wellness</span>
-                    <h4 class="font-bold text-base mb-2">Resilient Legacy</h4>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">The 5 Daily Mantras to sustain the vessel and ensure you outrun the competition.</p>
+                <div class="group p-10 bg-slate-950 rounded-[3rem] border border-white/5 hover:border-rose-500 transition-all">
+                    <span class="text-[11px] font-black text-rose-500/40 uppercase tracking-[0.5em] mb-8 block group-hover:text-rose-500">Module 05</span>
+                    <h4 class="font-black text-xl cinzel mb-4 tracking-widest uppercase">Wellness</h4>
+                    <p class="text-[12px] text-slate-500 leading-relaxed font-black uppercase tracking-widest">The 5 Daily Mantras to sustain the vessel.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Tiers - Restored High Impact -->
-    <section id="tiers" class="py-24 bg-slate-950">
+    <!-- Entrepreneur Pricing -->
+    <section id="tiers" class="py-32 bg-slate-950">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold cinzel">Marketplace Mentorship</h2>
-                <p class="text-slate-500 mt-2">Limited-capacity cohorts for high-performance builders.</p>
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-7xl font-black cinzel mb-8 leading-none">MENTORSHIP COHORTS</h2>
+                <p class="text-slate-500 text-xl uppercase tracking-[0.5em] font-black">Limited Capacity Elite Mentorship</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Peer Group -->
-                <div class="bg-slate-900 p-10 rounded-3xl border border-slate-800 flex flex-col hover:border-amber-500 transition-all">
-                    <h3 class="text-xl font-bold mb-2 uppercase tracking-widest text-slate-400">Peer Group</h3>
-                    <p class="text-4xl font-black mb-8">$397<span class="text-sm font-normal text-slate-500">/mo</span></p>
-                    <ul class="text-sm space-y-4 text-slate-400 mb-10 flex-grow">
-                        <li><i class="fas fa-check text-amber-500 mr-2"></i> Weekly Group T.R.A.I.N. Call</li>
-                        <li><i class="fas fa-check text-amber-500 mr-2"></i> Monthly 4-hr Executive Retreat</li>
-                        <li><i class="fas fa-check text-amber-500 mr-2"></i> Community Marketplace Network</li>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="bg-slate-900 p-14 rounded-[4rem] border border-white/5 flex flex-col hover:border-amber-500/30 transition-all shadow-2xl">
+                    <h3 class="text-2xl font-black cinzel mb-4 tracking-[0.3em] text-slate-400">PEER GROUP</h3>
+                    <p class="text-6xl font-black mb-12 text-white leading-none">$397<span class="text-sm font-normal text-slate-600 tracking-normal ml-3">/ month</span></p>
+                    <ul class="text-sm space-y-8 text-slate-400 mb-16 flex-grow font-black uppercase tracking-[0.2em]">
+                        <li><i class="fas fa-check text-amber-500 mr-4"></i> Weekly T.R.A.I.N. Call</li>
+                        <li><i class="fas fa-check text-amber-500 mr-4"></i> Monthly 4-hr Retreat</li>
+                        <li><i class="fas fa-check text-amber-500 mr-4"></i> Marketplace Network</li>
                     </ul>
-                    <button class="w-full py-4 rounded-xl border border-white font-bold hover:bg-white hover:text-slate-950 transition-all">Enroll Now</button>
+                    <button class="w-full py-6 rounded-3xl bg-white text-slate-950 font-black uppercase tracking-widest hover:bg-amber-500 transition-all">Enroll Now</button>
                 </div>
-                <!-- Circle -->
-                <div class="bg-amber-500 text-slate-950 p-10 rounded-3xl scale-105 shadow-2xl flex flex-col relative">
-                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-slate-950 text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Recommended</span>
-                    <h3 class="text-xl font-bold mb-2 uppercase tracking-widest">Leadership Circle</h3>
-                    <p class="text-4xl font-black mb-8">$697<span class="text-sm font-normal text-amber-900">/mo</span></p>
-                    <ul class="text-sm space-y-4 text-amber-950 mb-10 flex-grow font-bold">
-                        <li><i class="fas fa-plus mr-2"></i> Everything in Peer Group</li>
-                        <li><i class="fas fa-check mr-2"></i> Monthly 30-min Private 1:1</li>
-                        <li><i class="fas fa-check mr-2"></i> Distribution Strategy Map</li>
+                <div class="bg-amber-500 text-slate-950 p-14 rounded-[4rem] scale-105 shadow-[0_0_150px_rgba(251,191,36,0.25)] flex flex-col relative z-10 border-[6px] border-slate-950">
+                    <span class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-950 text-white px-10 py-3 rounded-full text-[11px] font-black uppercase tracking-[0.4em]">Elite Standard</span>
+                    <h3 class="text-2xl font-black cinzel mb-4 tracking-[0.3em] uppercase">Leadership Circle</h3>
+                    <p class="text-6xl font-black mb-12 leading-none">$697<span class="text-sm font-bold text-amber-900 tracking-normal ml-3 uppercase">/ month</span></p>
+                    <ul class="text-sm space-y-8 text-amber-950 mb-16 flex-grow font-black uppercase tracking-[0.2em]">
+                        <li><i class="fas fa-plus mr-4 text-slate-950"></i> Peer Group Plus</li>
+                        <li><i class="fas fa-check mr-4 text-slate-950"></i> Monthly 1:1 Session</li>
+                        <li><i class="fas fa-check mr-4 text-slate-950"></i> Distribution Plan</li>
                     </ul>
-                    <button class="w-full py-4 rounded-xl bg-slate-950 text-white font-bold hover:bg-slate-800 transition-all">Enroll Now</button>
+                    <button class="w-full py-6 rounded-3xl bg-slate-950 text-white font-black uppercase tracking-widest hover:bg-white hover:text-slate-950 transition-all">Enroll Now</button>
                 </div>
-                <!-- Exec -->
-                <div class="bg-slate-900 p-10 rounded-3xl border border-slate-800 flex flex-col hover:border-amber-500 transition-all">
-                    <h3 class="text-xl font-bold mb-2 uppercase tracking-widest text-slate-400">Executive 1:1</h3>
-                    <p class="text-4xl font-black mb-8">$1,497<span class="text-sm font-normal text-slate-500">/mo</span></p>
-                    <ul class="text-sm space-y-4 text-slate-400 mb-10 flex-grow">
-                        <li><i class="fas fa-check text-amber-500 mr-2"></i> Weekly 60-min Strategic Deep Dive</li>
-                        <li><i class="fas fa-check text-amber-500 mr-2"></i> Legacy Vision Architecture</li>
-                        <li><i class="fas fa-check text-amber-500 mr-2"></i> Unlimited Strategic Sync Access</li>
+                <div class="bg-slate-900 p-14 rounded-[4rem] border border-white/5 flex flex-col hover:border-amber-500/30 transition-all shadow-2xl">
+                    <h3 class="text-2xl font-black cinzel mb-4 tracking-[0.3em] text-slate-400">EXECUTIVE 1:1</h3>
+                    <p class="text-6xl font-black mb-12 text-white leading-none">$1,497<span class="text-sm font-normal text-slate-600 tracking-normal ml-3 uppercase">/ month</span></p>
+                    <ul class="text-sm space-y-8 text-slate-400 mb-16 flex-grow font-black uppercase tracking-[0.2em]">
+                        <li><i class="fas fa-check text-amber-500 mr-4"></i> Weekly Strategic Deep Dive</li>
+                        <li><i class="fas fa-check text-amber-500 mr-4"></i> Legacy Vision Architecture</li>
+                        <li><i class="fas fa-check text-amber-500 mr-4"></i> Full Strategic Access</li>
                     </ul>
-                    <button class="w-full py-4 rounded-xl border border-white text-white font-bold hover:bg-white hover:text-slate-950 transition-all">Request Invite</button>
+                    <button class="w-full py-6 rounded-3xl bg-white text-slate-950 font-black uppercase tracking-widest hover:bg-amber-500 transition-all">Request Invite</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center border-t border-white/5">
-        <a href="index.html" class="text-slate-600 hover:text-amber-500 text-[10px] uppercase font-bold tracking-widest transition-all">Back to Master Hub</a>
+    <footer class="py-16 text-center border-t border-white/5 bg-slate-950">
+        <a href="index.html" class="text-slate-700 hover:text-amber-500 text-[11px] font-black uppercase tracking-[0.6em] transition-all">Back to Master Hub</a>
     </footer>
 
 </body>
