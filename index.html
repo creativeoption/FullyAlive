@@ -3,99 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fully Alive | Home • Work • Church</title>
+    <title>FULLY ALIVE: @WORK @HOME @CHURCH</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; overflow: hidden; }
-        .cinzel { font-family: 'Cinzel', serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@300;400;600;700;800;900&display=swap');
         
+        :root {
+            --brand-amber: #fbbf24;
+            --bg-dark: #020617;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg-dark); 
+            color: white; 
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .cinzel { font-family: 'Cinzel', serif; }
+
+        /* Split Hero Responsiveness */
+        .split-container { 
+            display: flex; 
+            height: 100vh; 
+            width: 100%; 
+            position: relative; 
+            flex-direction: row;
+        }
+
         .split-pane {
-            transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 10vh;
+            width: 50%;
         }
-        
+
         .pane-entrepreneur {
-            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
+            background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), 
                         url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1500');
             background-size: cover; background-position: center;
         }
-        
+
         .pane-shepherd {
-            background: linear-gradient(rgba(120, 53, 15, 0.7), rgba(120, 53, 15, 0.7)), 
+            background: linear-gradient(rgba(69, 26, 3, 0.65), rgba(69, 26, 3, 0.85)), 
                         url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80&w=1500');
             background-size: cover; background-position: center;
         }
 
-        .pane-content {
-            opacity: 0.9;
-            transition: all 0.5s ease;
-        }
-
-        .split-pane:hover { width: 60% !important; }
-        .split-pane:hover .pane-content { opacity: 1; transform: scale(1.05); }
-        .other-pane:hover { width: 40% !important; }
-
-        .cross-center {
+        .brand-overlay {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 20;
+            z-index: 50;
             pointer-events: none;
+            text-align: center;
+            width: 90%;
+            max-width: 800px;
         }
-        
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            box-shadow: 0 0 100px rgba(251, 191, 36, 0.2);
+            padding: clamp(2rem, 5vw, 5rem);
+        }
+
+        .glow-text { text-shadow: 0 0 40px rgba(251, 191, 36, 0.7); }
+
+        /* Desktop Hover Effects */
+        @media (min-width: 769px) {
+            .split-pane:hover { width: 65% !important; }
+            .split-pane:hover .pane-content { transform: scale(1.05); opacity: 1; }
+            .split-pane:not(:hover) { width: 35%; }
+        }
+
+        /* Mobile Adjustments */
         @media (max-width: 768px) {
-            body { overflow-y: auto; }
-            .split-container { flex-direction: column; height: auto !important; }
-            .split-pane { width: 100% !important; height: 50vh; }
+            .split-container { flex-direction: column; height: auto; }
+            .split-pane { width: 100% !important; height: 65vh; padding-bottom: 4rem; }
+            .brand-overlay { position: relative; transform: none; left: 0; top: 0; margin: 0 auto; width: 100%; padding: 4rem 1.5rem 2rem; }
+            .glass-card { border-radius: 2rem; }
+            .split-pane:first-of-type { border-bottom: 4px solid var(--brand-amber); }
         }
+
+        /* Fluid Typography */
+        h1 { font-size: clamp(2rem, 8vw, 5rem); }
+        .hero-statement { font-size: clamp(1.5rem, 5vw, 3.5rem); }
     </style>
 </head>
-<body class="bg-slate-950 text-white">
+<body>
 
-    <div class="split-container flex h-screen w-full relative">
-        
-        <!-- Central Spiritual Anchor -->
-        <div class="cross-center text-center hidden md:block">
-            <div class="bg-slate-900/80 backdrop-blur-xl p-6 rounded-full border border-amber-500/30 shadow-[0_0_50px_rgba(251,191,36,0.2)]">
-                <i class="fas fa-cross text-amber-500 text-5xl"></i>
+    <!-- Main Navigation (Hidden on Mobile, simplified) -->
+    <nav class="absolute top-0 w-full z-[60] px-6 py-8 hidden md:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-[10px] font-black uppercase tracking-[0.4em]">
+            <span>Fully Alive Movement</span>
+            <div class="space-x-8">
+                <a href="#vision" class="hover:text-amber-500 transition-colors">The Vision</a>
+                <a href="#arenas" class="hover:text-amber-500 transition-colors">The Arenas</a>
             </div>
-            <div class="mt-4 cinzel text-xs tracking-[0.5em] text-amber-500 font-bold uppercase">Fully Alive</div>
+        </div>
+    </nav>
+
+    <!-- 1. Split Hero Section -->
+    <div class="split-container relative">
+        
+        <!-- Branding Center Anchor -->
+        <div class="brand-overlay">
+            <div class="inline-block glass-card rounded-[3rem] md:rounded-[5rem]">
+                <div class="text-amber-500 text-5xl md:text-8xl mb-6 md:mb-10">
+                    <i class="fas fa-cross glow-text"></i>
+                </div>
+                <h1 class="cinzel font-black tracking-[0.2em] leading-none mb-6">
+                    FULLY <span class="text-amber-500">ALIVE</span>
+                </h1>
+                <div class="flex flex-wrap justify-center gap-4 md:gap-10 text-amber-500 font-black text-xs md:text-base tracking-[0.5em] uppercase">
+                    <span>@WORK</span>
+                    <span>@HOME</span>
+                    <span>@CHURCH</span>
+                </div>
+                <p class="mt-8 text-slate-400 text-[10px] md:text-xs font-black uppercase tracking-[0.4em] italic opacity-60">"I will order your steps."</p>
+            </div>
+            <div class="mt-8 md:mt-12 animate-bounce text-slate-500 hidden md:block">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </div>
         </div>
 
-        <!-- Left: Entrepreneur Path -->
-        <a href="marketplace.html" class="split-pane pane-entrepreneur w-1/2 flex items-center justify-center p-12 group">
-            <div class="pane-content text-center z-10">
-                <span class="text-amber-500 font-bold uppercase tracking-[0.4em] text-xs mb-4 block">Marketplace Track</span>
-                <h2 class="text-4xl lg:text-6xl font-bold cinzel mb-6 leading-tight">The Kingdom <br>Entrepreneur</h2>
-                <p class="text-slate-300 max-w-sm mx-auto mb-8 font-light italic">"I build businesses that fund the Kingdom"</p>
-                <div class="inline-block bg-white text-slate-950 px-8 py-3 rounded-full font-black uppercase text-xs tracking-widest group-hover:bg-amber-500 transition-colors">
+        <!-- Left Track: Entrepreneur -->
+        <a href="marketplace.html" class="split-pane pane-entrepreneur group border-r border-white/5">
+            <div class="pane-content transition-all duration-700 text-center z-10 px-8">
+                <h2 class="hero-statement font-black cinzel mb-4 leading-tight uppercase">I Build To <br><span class="text-amber-500">Steward.</span></h2>
+                <p class="text-slate-300 font-black uppercase tracking-[0.3em] text-[10px] mb-8">"I build businesses that fund the Kingdom"</p>
+                <div class="inline-block bg-white text-slate-950 px-10 py-4 rounded-full font-black uppercase text-[10px] tracking-widest group-hover:bg-amber-500 transition-colors pointer-events-auto shadow-2xl">
                     Enter Track
                 </div>
             </div>
         </a>
 
-        <!-- Right: Shepherd Path -->
-        <a href="kingdom.html" class="split-pane pane-shepherd w-1/2 flex items-center justify-center p-12 group border-l border-white/10">
-            <div class="pane-content text-center z-10">
-                <span class="text-amber-200 font-bold uppercase tracking-[0.4em] text-xs mb-4 block">Ecclesial Track</span>
-                <h2 class="text-4xl lg:text-6xl font-bold cinzel mb-6 leading-tight">The Kingdom <br>Shepherd</h2>
-                <p class="text-amber-100 max-w-sm mx-auto mb-8 font-light italic">"I rebirth churches that multiply impact"</p>
-                <div class="inline-block bg-white text-slate-950 px-8 py-3 rounded-full font-black uppercase text-xs tracking-widest group-hover:bg-amber-500 transition-colors">
+        <!-- Right Track: Shepherd -->
+        <a href="kingdom.html" class="split-pane pane-shepherd group">
+            <div class="pane-content transition-all duration-700 text-center z-10 px-8">
+                <h2 class="hero-statement font-black cinzel mb-4 leading-tight uppercase">I Lead To <br><span class="text-amber-200">Rebirth.</span></h2>
+                <p class="text-amber-100/70 font-black uppercase tracking-[0.3em] text-[10px] mb-8">"I rebirth churches that multiply impact"</p>
+                <div class="inline-block bg-white text-slate-950 px-10 py-4 rounded-full font-black uppercase text-[10px] tracking-widest group-hover:bg-amber-500 transition-colors pointer-events-auto shadow-2xl">
                     Enter Track
                 </div>
             </div>
         </a>
-
     </div>
 
-    <!-- Mobile Bottom Overlay -->
-    <div class="md:hidden absolute bottom-0 w-full p-6 text-center bg-gradient-to-t from-slate-950 to-transparent">
-        <p class="text-xs uppercase tracking-widest text-slate-400">Fully Alive: Home • Work • Church</p>
-    </div>
+    <!-- 2. The Great Pivot Content -->
+    <section id="vision" class="py-24 md:py-40 bg-slate-950 border-t border-white/10 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 md:gap-32 items-center">
+            <div>
+                <h2 class="text-5xl md:text-8xl font-black cinzel mb-10 leading-none">
+                    THE GREAT <br><span class="text-amber-500 italic">PIVOT.</span>
+                </h2>
+                <div class="space-y-8 text-slate-400 text-lg md:text-xl font-light leading-relaxed">
+                    <p>High-performers are often trapped in the tension of <span class="text-white font-bold uppercase tracking-widest text-sm">Good (Man)</span>. We operate from a scarcity mindset of "0 Sum" resources.</p>
+                    <p>Being <span class="text-amber-500 font-black uppercase tracking-widest text-lg">Fully Alive</span> means moving to <span class="text-white font-bold uppercase tracking-widest text-sm">Great (God)</span>. This is the shift from the Fear of Man to the Fear of the Lord.</p>
+                    <div class="bg-slate-900/50 p-8 md:p-12 rounded-[3rem] border border-white/5 mt-12 shadow-2xl">
+                        <p class="text-2xl md:text-3xl font-light italic text-white leading-relaxed">"I will order your steps; David loved Saul, I made him King!"</p>
+                        <p class="text-[10px] mt-10 text-amber-500 uppercase font-black tracking-[0.4em]">— The 2025 Pivot Revelation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+                <div class="p-10 bg-slate-900 border border-white/5 rounded-[2.5rem] text-center shadow-xl">
+                    <span class="text-amber-500 text-5xl font-black mb-4 block">5Ws</span>
+                    <h5 class="text-white font-bold uppercase tracking-widest text-xs mb-4">Operating System</h5>
+                    <p class="text-[10px] text-slate-500 leading-relaxed uppercase tracking-[0.2em]">Worship • Work • Wealth <br> Wisdom • Wellness</p>
+                </div>
+                <div class="p-10 bg-slate-900 border border-white/5 rounded-[2.5rem] text-center shadow-xl">
+                    <span class="text-amber-500 text-5xl font-black mb-4 block">WELL</span>
+                    <h5 class="text-white font-bold uppercase tracking-widest text-xs mb-4">Done Method</h5>
+                    <p class="text-[10px] text-slate-500 leading-relaxed uppercase tracking-[0.2em]">Foundation • Sails <br> Rigging • Navigation</p>
+                </div>
+                <div class="sm:col-span-2 p-12 md:p-16 bg-amber-500 rounded-[3rem] text-slate-950 text-center shadow-[0_0_150px_rgba(251,191,36,0.2)]">
+                    <span class="text-7xl md:text-9xl font-black tracking-tighter mb-4 block leading-none">10X</span>
+                    <h5 class="font-black uppercase tracking-[0.4em] text-sm">Kingdom Impact</h5>
+                    <p class="mt-6 font-bold text-lg md:text-xl max-w-sm mx-auto italic leading-relaxed">"Stop building companies to store treasure. Start building platforms to feed the harvest."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Integrated Arenas Section -->
+    <section id="arenas" class="py-24 md:py-40 bg-slate-900 border-y border-white/10 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-8xl font-black cinzel mb-6 uppercase tracking-tighter leading-none">Wholeness</h2>
+                <p class="text-slate-500 text-xl font-black uppercase tracking-[0.5em]">Faith Across Every Domain</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+                <!-- Arena: Work -->
+                <div class="text-center group p-8 bg-slate-950/50 rounded-[3rem] border border-white/5 hover:border-amber-500 transition-all">
+                    <div class="w-24 h-24 bg-slate-950 rounded-[2.5rem] border border-white/10 flex items-center justify-center text-amber-500 text-4xl mx-auto mb-10 shadow-2xl group-hover:border-amber-500/50 transition-all">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h4 class="text-3xl font-black cinzel mb-6 tracking-widest uppercase">@WORK</h4>
+                    <p class="text-slate-400 font-light leading-relaxed text-lg">Marketplace as mission. Operational excellence as your primary act of worship. Shift from conqueror to distributor.</p>
+                </div>
+                <!-- Arena: Home -->
+                <div class="text-center group p-8 bg-slate-950/50 rounded-[3rem] border border-white/5 hover:border-amber-500 transition-all">
+                    <div class="w-24 h-24 bg-slate-950 rounded-[2.5rem] border border-white/10 flex items-center justify-center text-amber-500 text-4xl mx-auto mb-10 shadow-2xl group-hover:border-amber-500/50 transition-all">
+                        <i class="fas fa-house-chimney"></i>
+                    </div>
+                    <h4 class="text-3xl font-black cinzel mb-6 tracking-widest uppercase">@HOME</h4>
+                    <p class="text-slate-400 font-light leading-relaxed text-lg">Passing down values, not just valuables. Breaking generational curses through the Ra Family Benediction.</p>
+                </div>
+                <!-- Arena: Church -->
+                <div class="text-center group p-8 bg-slate-950/50 rounded-[3rem] border border-white/5 hover:border-amber-500 transition-all">
+                    <div class="w-24 h-24 bg-slate-950 rounded-[2.5rem] border border-white/10 flex items-center justify-center text-amber-500 text-4xl mx-auto mb-10 shadow-2xl group-hover:border-amber-500/50 transition-all">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h4 class="text-3xl font-black cinzel mb-6 tracking-widest uppercase">@CHURCH</h4>
+                    <p class="text-slate-400 font-light leading-relaxed text-lg">From maintenance to mission. Unlocking the 10X potential in the pews to fund the end-times harvest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Lead Gen -->
+    <section class="py-32 bg-slate-950 text-center px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-7xl font-black cinzel mb-8 leading-none">CHOOSE <br>YOUR <span class="text-amber-500">POCKET.</span></h2>
+            <p class="text-slate-500 text-lg md:text-xl mb-16 uppercase tracking-[0.4em] font-black">The Kingdom is waiting for your pivot.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6 md:gap-10">
+                <a href="marketplace.html" class="bg-amber-500 text-slate-950 px-16 py-6 rounded-3xl font-black uppercase tracking-widest shadow-xl hover:bg-white transition-all transform hover:scale-105">Marketplace Track</a>
+                <a href="kingdom.html" class="bg-white text-slate-950 px-16 py-6 rounded-3xl font-black uppercase tracking-widest shadow-xl hover:bg-amber-500 transition-all transform hover:scale-105">Shepherd Track</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center text-slate-800 text-[12px] font-black uppercase tracking-[0.7em] border-t border-white/5 bg-slate-950">
+        &copy; 2026 FULLY ALIVE MOVEMENT. ALL RIGHTS RESERVED.
+    </footer>
 
 </body>
 </html>
