@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Leadership & Life Integrated Guide</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              800: '#0c4a6e',
+              900: '#082f49',
+            },
+            accent: {
+              amber: '#d97706',
+              emerald: '#059669',
+              violet: '#7c3aed',
+              rose: '#e11d48',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .dark ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+    .smooth-transition {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-nav {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .badge-ref {
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .badge-ref:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased min-h-screen flex flex-col">
+
+  <nav class="sticky top-0 z-40 w-full glass-nav bg-white/90 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo & Title -->
+        <div class="flex items-center gap-3 cursor-pointer" onclick="switchView('integrated')">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-600 text-white flex items-center justify-center shadow-md shadow-sky-500/20">
+            <i class="fa-solid fa-compass text-lg"></i>
+          </div>
+          <div>
+            <span class="font-heading font-bold text-lg sm:text-xl tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+              Integrated Leader<span class="text-sky-600 dark:text-sky-400">OS</span>
+            </span>
+            <span class="hidden sm:block text-xs font-medium text-slate-500 dark:text-slate-400">
+              John Maxwell • 5W • Fully Alive (T.R.A.I.N.) • Andy Stanley (Tensions) • John Bevere & Francis Chan (Multiply) • Big.Life • Francis Chan (We Are Church)
+            </span>
+          </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="hidden md:flex items-center gap-1 bg-slate-100 dark:bg-slate-800/70 p-1 rounded-xl border border-slate-200/80 dark:border-slate-700/60 text-sm">
+          <button id="nav-btn-integrated" onclick="switchView('integrated')" class="px-3.5 py-1.5 rounded-lg font-medium transition text-sky-700 dark:text-sky-300 bg-white dark:bg-slate-700 shadow-sm">
+            <i class="fa-solid fa-layer-group mr-1.5 text-xs"></i> Integrated Synthesis
+          </button>
+          <button id="nav-btn-deepdives" onclick="switchView('deepdives')" class="px-3.5 py-1.5 rounded-lg font-medium transition text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+            <i class="fa-solid fa-book-open mr-1.5 text-xs"></i> 7 Core Deep Dives
+          </button>
+          <button id="nav-btn-audit" onclick="switchView('audit')" class="px-3.5 py-1.5 rounded-lg font-medium transition text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+            <i class="fa-solid fa-sliders mr-1.5 text-xs"></i> Self-Audit
+          </button>
+          <button id="nav-btn-matrix" onclick="switchView('matrix')" class="px-3.5 py-1.5 rounded-lg font-medium transition text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+            <i class="fa-solid fa-table-cells mr-1.5 text-xs"></i> Field Cheat Sheet
+          </button>
+        </div>
+
+        <!-- Action Controls -->
+        <div class="flex items-center gap-2">
+          <!-- Quick Search Button -->
+          <button onclick="toggleSearchModal(true)" class="p-2 sm:px-3 sm:py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center gap-2 text-sm border border-transparent hover:border-slate-200 dark:hover:border-slate-700" title="Search all principles">
+            <i class="fa-solid fa-magnifying-glass text-slate-500"></i>
+            <span class="hidden sm:inline font-medium">Quick Search</span>
+            <kbd class="hidden lg:inline text-[10px] bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-1.5 py-0.5 rounded">⌘K</kbd>
+          </button>
+
+          <!-- Dark Mode Toggle -->
+          <button onclick="toggleDarkMode()" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition" aria-label="Toggle Theme">
+            <i id="theme-icon" class="fa-solid fa-moon"></i>
+          </button>
+
+          <!-- Mobile Menu Trigger -->
+          <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Navigation -->
+      <div id="mobile-nav" class="hidden md:hidden pb-4 pt-2 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-2">
+        <button onclick="switchView('integrated'); toggleMobileMenu();" class="text-left px-3 py-2 rounded-lg font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2">
+          <i class="fa-solid fa-layer-group text-sky-500 w-5"></i> Integrated Synthesis
+        </button>
+        <button onclick="switchView('deepdives'); toggleMobileMenu();" class="text-left px-3 py-2 rounded-lg font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2">
+          <i class="fa-solid fa-book-open text-sky-500 w-5"></i> 7 Core Deep Dives
+        </button>
+        <button onclick="switchView('audit'); toggleMobileMenu();" class="text-left px-3 py-2 rounded-lg font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2">
+          <i class="fa-solid fa-sliders text-sky-500 w-5"></i> Self-Audit Tool
+        </button>
+        <button onclick="switchView('matrix'); toggleMobileMenu();" class="text-left px-3 py-2 rounded-lg font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2">
+          <i class="fa-solid fa-table-cells text-sky-500 w-5"></i> Field Cheat Sheet
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- VIEW 1: INTEGRATED SYNTHESIS (DEFAULT VIEW) -->
+    <div id="view-integrated" class="space-y-8 animate-fadeIn">
+      <!-- Hero Banner -->
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-sky-950 to-indigo-950 text-white p-6 sm:p-10 shadow-xl border border-sky-900/40">
+        <div class="relative z-10 max-w-4xl space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/20 border border-sky-400/30 text-sky-300 text-xs font-semibold uppercase tracking-wider">
+            <i class="fa-solid fa-infinity"></i> Unified 360° Life & Leadership Operating System
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading tracking-tight text-white leading-tight">
+            Lead from Inner Life to <br class="hidden sm:inline"/>
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-teal-300 to-indigo-300">
+              Exponential Kingdom Multiplication
+            </span>
+          </h1>
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-3xl font-light">
+            No single framework solves the modern leader's dilemma. True lasting impact requires 
+            <strong>Soul Vitality & Wholeness</strong> (<em>Fully Alive: T.R.A.I.N. 5T+5W+5M</em> & <strong>Andy Stanley's</strong> <em>My Tensions</em>), 
+            <strong>Strategic Clarity</strong> (<em>5W Execution</em>), 
+            <strong>Catalytic Influence</strong> (<strong>John Maxwell's</strong> <em>21 Laws</em>), and 
+            <strong>Decentralized Discipleship</strong> (<strong>John Bevere & Francis Chan's</strong> <em>Multiply</em>, <em>Big.Life</em>, & <strong>Francis Chan's</strong> <em>We Are Church</em>).
+          </p>
+
+          <!-- Quick Jump Chips -->
+          <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
+            <span class="text-slate-400 font-semibold mr-1">Direct Deep Dives:</span>
+            <button onclick="openDeepDive('maxwell')" class="px-3 py-1.5 rounded-lg bg-sky-900/50 hover:bg-sky-800 text-sky-200 border border-sky-700/50 transition flex items-center gap-1.5 font-medium">
+              <i class="fa-solid fa-crown text-amber-400"></i> John Maxwell (21 Laws)
+            </button>
+            <button onclick="openDeepDive('fivew')" class="px-3 py-1.5 rounded-lg bg-indigo-900/50 hover:bg-indigo-800 text-indigo-200 border border-indigo-700/50 transition flex items-center gap-1.5 font-medium">
+              <i class="fa-solid fa-crosshairs text-sky-400"></i> 5W Strategic Framework
+            </button>
+            <button onclick="openDeepDive('fullyalive')" class="px-3 py-1.5 rounded-lg bg-emerald-900/50 hover:bg-emerald-800 text-emerald-200 border border-emerald-700/50 transition flex items-center gap-1.5 font-medium">
+              <i class="fa-solid fa-heart-pulse text-emerald-400"></i> Fully Alive (T.R.A.I.N.)
+            </button>
+            <button onclick="openDeepDive('tensions')" class="px-3 py-1.5 rounded-lg bg-amber-900/50 hover:bg-amber-800 text-amber-200 border border-amber-700/50 transition flex items-center gap-1.5 font-medium">
+              <i class="fa-solid fa-scale-balanced text-amber-400"></i> Andy Stanley (My Tensions)
+            </button>
+            <button onclick="openDeepDive('multiply')" class="px-3 py-1.5 rounded-lg bg-rose-900/50 hover:bg-rose-800 text-rose-200 border border-rose-700/50 transition flex items-center gap-1.5 font-medium">
+              <i class="fa-solid fa-dna text-rose-400"></i> Bevere & Chan (Multiply)
+            </button>
+            <button onclick="openDeepDive('biglife')" class="px-3 py-1.5 rounded-lg bg-teal-900/50 hover:bg-teal-800 text-teal-200 border border-teal-700/50 transition flex items-center gap-1.5 font-medium">
+              <i class="fa-solid fa-network-wired text-teal-400"></i> Big.Life DMM
+            </button>
+            <button onclick="openDeepDive('wearechurch')" class="px-3 py-1.5 rounded-lg bg-purple-900/50 hover:bg-purple-800 text-purple-200 border border-purple-700/50 transition flex items-center gap-1.5 font-medium">
+              <i class="fa-solid fa-house-chimney-window text-purple-400"></i> Francis Chan (We Are Church)
+            </button>
+          </div>
+        </div>
+
+        <!-- Decorative background glow -->
+        <div class="absolute -right-16 -top-16 w-80 h-80 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-16 -bottom-16 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      </div>
+
+      <div>
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h2 class="text-xl sm:text-2xl font-bold font-heading text-slate-900 dark:text-white">
+              The 4 Pillars of the Integrated Life Architecture
+            </h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+              Interactive bridge connecting personal soul wellness with relational leadership and multiplying community.
+            </p>
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded bg-slate-200 dark:bg-slate-800 font-medium text-slate-600 dark:text-slate-300">
+            Click any card to inspect
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Pillar 1 -->
+          <div onclick="openDeepDive('fullyalive')" class="group cursor-pointer bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-emerald-500/60 dark:hover:border-emerald-500/60 transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4 group-hover:scale-105 transition">
+                <i class="fa-solid fa-heart-pulse text-xl"></i>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Pillar I • Soul Calibration</span>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition">
+                Fully Alive: T.R.A.I.N. (5T+5W+5M)
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                Break the sacred-secular divide. Operationalize <strong>Target the Tension (5T)</strong>, <strong>5W Wholeness</strong> (Work, Worship, Wealth, Wisdom, Wellness), and <strong>5 Daily Mantras (5M)</strong> to sustain high-impact Kingdom leadership.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-medium text-emerald-600 dark:text-emerald-400">
+              <span>Includes: T.R.A.I.N. Peer Framework</span>
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div onclick="openDeepDive('fivew')" class="group cursor-pointer bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-indigo-500/60 dark:hover:border-indigo-500/60 transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-4 group-hover:scale-105 transition">
+                <i class="fa-solid fa-compass-drafting text-xl"></i>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Pillar II • Strategic Alignment</span>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">
+                The 5W Directional Compass
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                Eliminating ambiguity through <strong>Who</strong> (Identity/Teammates), <strong>What</strong> (Mission), <strong>Where</strong> (Context), <strong>When</strong> (Kairós timing), and <strong>Why</strong> (Sacred Core).
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-medium text-indigo-600 dark:text-indigo-400">
+              <span>Includes: 5W Strategic Blueprint</span>
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div onclick="openDeepDive('maxwell')" class="group cursor-pointer bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-sky-500/60 dark:hover:border-sky-500/60 transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-sky-100 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-4 group-hover:scale-105 transition">
+                <i class="fa-solid fa-crown text-xl"></i>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Pillar III • Relational Influence</span>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition">
+                Maxwell's Irrefutable Laws
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                Leadership is influence—nothing more, nothing less. Operating by the laws of <strong>The Lid</strong>, <strong>Process</strong>, <strong>Connection</strong>, and <strong>Empowerment</strong> to lift others.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-medium text-sky-600 dark:text-sky-400">
+              <span>Includes: All 21 Irrefutable Laws</span>
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+            </div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div onclick="openDeepDive('multiply')" class="group cursor-pointer bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-rose-500/60 dark:hover:border-rose-500/60 transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-rose-100 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4 group-hover:scale-105 transition">
+                <i class="fa-solid fa-people-roof text-xl"></i>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">Pillar IV • Kingdom Multiplication</span>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition">
+                Micro-Movements & Ecclesia
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                Transitioning from addition to exponential generation: <strong>Multiply</strong> discipleship, <strong>Big.Life</strong> 3/3rds Discovery DMM, and <strong>We Are Church</strong> decentralized micro-assemblies.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-medium text-rose-600 dark:text-rose-400">
+              <span>Includes: Multiply + Big.Life + We Are Church</span>
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+          <div>
+            <h2 class="text-xl sm:text-2xl font-bold font-heading text-slate-900 dark:text-white">
+              The Integrated Leadership Matrix
+            </h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+              How every distinct framework answers the core challenges of personal and collective leadership.
+            </p>
+          </div>
+          <button onclick="switchView('matrix')" class="text-sm font-semibold text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1 self-start sm:self-auto">
+            View Expanded Field Cheat Sheet <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm border-collapse">
+            <thead>
+              <tr class="border-b border-slate-200 dark:border-slate-800 text-xs font-semibold uppercase text-slate-500 dark:text-slate-400 bg-slate-50/50 dark:bg-slate-800/30">
+                <th class="py-3 px-4 rounded-l-xl">Domain</th>
+                <th class="py-3 px-4">Primary Teaching Source</th>
+                <th class="py-3 px-4">Master Principle</th>
+                <th class="py-3 px-4">Practical Application</th>
+                <th class="py-3 px-4 rounded-r-xl">Deep Dive</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800 font-normal text-slate-700 dark:text-slate-300">
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                <td class="py-4 px-4 font-semibold text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                  Personal Vitality & Wholeness
+                </td>
+                <td class="py-4 px-4 font-medium">Fully Alive: T.R.A.I.N. (5T + 5W + 5M)</td>
+                <td class="py-4 px-4">Bridge Sunday faith to Monday reality; align 5W Wholeness (Work, Worship, Wealth, Wisdom, Wellness) via 5 Mantras.</td>
+                <td class="py-4 px-4 text-xs text-slate-500 dark:text-slate-400">Run the 5-step T.R.A.I.N. cycle: Target Tension, Reveal Shift, Activate Mantras, Integrate 5Ws, Navigate Steps.</td>
+                <td class="py-4 px-4">
+                  <button onclick="openDeepDive('fullyalive')" class="badge-ref inline-flex items-center gap-1 px-2.5 py-1 rounded bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 text-xs font-medium">
+                    Inspect <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                <td class="py-4 px-4 font-semibold text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                  Equilibrium
+                </td>
+                <td class="py-4 px-4 font-medium">My Tensions (Andy Stanley)</td>
+                <td class="py-4 px-4">Recognizing paradoxes to manage (Grace vs. Truth, Present vs. Future) rather than problems to solve.</td>
+                <td class="py-4 px-4 text-xs text-slate-500 dark:text-slate-400">Map competing goods; refuse false dichotomies that compromise integrity.</td>
+                <td class="py-4 px-4">
+                  <button onclick="openDeepDive('tensions')" class="badge-ref inline-flex items-center gap-1 px-2.5 py-1 rounded bg-amber-50 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800 text-xs font-medium">
+                    Inspect <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                <td class="py-4 px-4 font-semibold text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+                  Clarity
+                </td>
+                <td class="py-4 px-4 font-medium">The 5W Framework</td>
+                <td class="py-4 px-4">Who (Identity/Team), What (Mission), Where (Context), When (Timing), Why (Sacred Motivation).</td>
+                <td class="py-4 px-4 text-xs text-slate-500 dark:text-slate-400">Clarify every leadership initiative through the 5 foundational filters before launching.</td>
+                <td class="py-4 px-4">
+                  <button onclick="openDeepDive('fivew')" class="badge-ref inline-flex items-center gap-1 px-2.5 py-1 rounded bg-indigo-50 dark:bg-indigo-950/70 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 text-xs font-medium">
+                    Inspect <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                <td class="py-4 px-4 font-semibold text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+                  Catalytic Influence
+                </td>
+                <td class="py-4 px-4 font-medium">John C. Maxwell (21 Irrefutable Laws)</td>
+                <td class="py-4 px-4">Lifting the Lid, building Solid Ground trust, connecting hearts before asking for a hand.</td>
+                <td class="py-4 px-4 text-xs text-slate-500 dark:text-slate-400">Systematically remove personal lids; empower leaders via the Law of Explosive Growth.</td>
+                <td class="py-4 px-4">
+                  <button onclick="openDeepDive('maxwell')" class="badge-ref inline-flex items-center gap-1 px-2.5 py-1 rounded bg-sky-50 dark:bg-sky-950/70 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 text-xs font-medium">
+                    Inspect <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                <td class="py-4 px-4 font-semibold text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  Discipleship DNA
+                </td>
+                <td class="py-4 px-4 font-medium">Multiply (John Bevere & Francis Chan)</td>
+                <td class="py-4 px-4">Every believer is summoned to reproduce disciples; eternal stakes overshadow temporal trivialities.</td>
+                <td class="py-4 px-4 text-xs text-slate-500 dark:text-slate-400">Intentionally disciple 2-3 people with reproduction as the measurable fruit.</td>
+                <td class="py-4 px-4">
+                  <button onclick="openDeepDive('multiply')" class="badge-ref inline-flex items-center gap-1 px-2.5 py-1 rounded bg-rose-50 dark:bg-rose-950/70 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800 text-xs font-medium">
+                    Inspect <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                <td class="py-4 px-4 font-semibold text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-500"></span>
+                  Movement Engine
+                </td>
+                <td class="py-4 px-4 font-medium">Big.Life (DMM Methodology)</td>
+                <td class="py-4 px-4">Rapid viral discipleship via 3/3rds group structure and Discovery Bible Study (Look Back, Up, Ahead).</td>
+                <td class="py-4 px-4 text-xs text-slate-500 dark:text-slate-400">Facilitate obedience-based discovery groups that multiply to 4th generation and beyond.</td>
+                <td class="py-4 px-4">
+                  <button onclick="openDeepDive('biglife')" class="badge-ref inline-flex items-center gap-1 px-2.5 py-1 rounded bg-teal-50 dark:bg-teal-950/70 text-teal-700 dark:text-teal-300 border border-teal-200 dark:border-teal-800 text-xs font-medium">
+                    Inspect <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                <td class="py-4 px-4 font-semibold text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span>
+                  Ecclesial Structure
+                </td>
+                <td class="py-4 px-4 font-medium">We Are Church (Francis Chan)</td>
+                <td class="py-4 px-4">Zero-overhead micro house churches, plural unpaid elders, deep biblical love, all members ministering.</td>
+                <td class="py-4 px-4 text-xs text-slate-500 dark:text-slate-400">Shift from consumer spectacle to participatory, multiplying family-sized faith communities.</td>
+                <td class="py-4 px-4">
+                  <button onclick="openDeepDive('wearechurch')" class="badge-ref inline-flex items-center gap-1 px-2.5 py-1 rounded bg-purple-50 dark:bg-purple-950/70 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 text-xs font-medium">
+                    Inspect <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-6 rounded-2xl border border-slate-700 shadow-md">
+          <div class="text-sky-400 font-bold text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-sun"></i> Morning Rhythm (Self & Spirit)
+          </div>
+          <h4 class="text-lg font-bold font-heading mb-2">Internal Check & Lid Lift</h4>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Begin with <strong>Fully Alive</strong> physical & spiritual awakening. Frame daily decisions with the <strong>5W's Why</strong>, and identify the <strong>Tension</strong> you must hold with grace today.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-6 rounded-2xl border border-slate-700 shadow-md">
+          <div class="text-amber-400 font-bold text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-briefcase"></i> Midday Execution (Leadership)
+          </div>
+          <h4 class="text-lg font-bold font-heading mb-2">Relational Connection</h4>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Execute through Maxwell's <strong>Law of Connection</strong> and <strong>Empowerment</strong>. Ensure team members understand their <em>Who</em> and <em>What</em> without top-down authoritarianism.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-6 rounded-2xl border border-slate-700 shadow-md">
+          <div class="text-rose-400 font-bold text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-moon"></i> Evening Legacy (Multiplication)
+          </div>
+          <h4 class="text-lg font-bold font-heading mb-2">Micro-Discipleship & Review</h4>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Practice <strong>Big.Life</strong> 3/3rds reflection: Look back (accountability), Look up (scripture obedience), Look ahead (who will you train?). Build <strong>We Are Church</strong> familial warmth.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 2: 7 SEPARATE DEEP DIVES VIEW -->
+    <div id="view-deepdives" class="hidden space-y-8 animate-fadeIn">
+      <!-- Section Header -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-5">
+        <div>
+          <h1 class="text-2xl sm:text-3xl font-bold font-heading text-slate-900 dark:text-white">
+            7 Deep Dive Master Summaries
+          </h1>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            Comprehensive, isolated deep dives with principles, laws, scriptures, and tactical leadership playbooks.
+          </p>
+        </div>
+        <!-- Filter Tabs -->
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0" id="deepdive-filter-tabs">
+          <button onclick="filterDeepDives('all')" class="deep-tab active-filter text-xs font-semibold px-3 py-1.5 rounded-lg bg-sky-600 text-white transition">All (7)</button>
+          <button onclick="filterDeepDives('leadership')" class="deep-tab text-xs font-medium px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition">Leadership</button>
+          <button onclick="filterDeepDives('personal')" class="deep-tab text-xs font-medium px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition">Personal Soul</button>
+          <button onclick="filterDeepDives('discipleship')" class="deep-tab text-xs font-medium px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition">Discipleship & Church</button>
+        </div>
+      </div>
+
+      <!-- Deep Dive Grid Container -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6" id="deepdives-grid">
+        
+        <!-- CARD 1: MAXWELL 21 LAWS -->
+        <div class="deepdive-card" data-category="leadership">
+          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col h-full hover:border-sky-500/50 transition">
+            <div class="p-6 border-b border-slate-100 dark:border-slate-800/80 bg-gradient-to-r from-sky-500/5 to-transparent flex items-start justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-lg">
+                  <i class="fa-solid fa-crown"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Leadership Standard</span>
+                  <h2 class="text-xl font-bold font-heading text-slate-900 dark:text-white">John Maxwell: 21 Irrefutable Laws</h2>
+                </div>
+              </div>
+              <span class="text-xs font-semibold px-2 py-1 rounded bg-sky-100 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300">21 Laws</span>
+            </div>
+            <div class="p-6 flex-grow space-y-4 text-sm text-slate-600 dark:text-slate-300">
+              <p>
+                <strong>Core Premise:</strong> Leadership is not titles or privileges; it is influence. Maxwell's 21 Irrefutable Laws serve as the foundational benchmarks of human influence, team development, and organizational trajectory.
+              </p>
+              <div class="bg-slate-50 dark:bg-slate-800/50 p-3.5 rounded-xl border border-slate-200/70 dark:border-slate-700/60 space-y-1.5 text-xs">
+                <div class="font-semibold text-slate-800 dark:text-slate-200"><i class="fa-solid fa-check text-sky-500 mr-1"></i> Notable Anchor Laws:</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 text-slate-600 dark:text-slate-400">
+                  <span>• <strong>Law of the Lid:</strong> Ability determines ceiling</span>
+                  <span>• <strong>Law of Process:</strong> Daily discipline</span>
+                  <span>• <strong>Law of Solid Ground:</strong> Trust is foundation</span>
+                  <span>• <strong>Law of Connection:</strong> Touch hearts first</span>
+                  <span>• <strong>Law of Explosive Growth:</strong> Multiply leaders</span>
+                  <span>• <strong>Law of Legacy:</strong> Succession counts</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1 text-xs text-slate-500">
+                <span class="font-medium text-slate-700 dark:text-slate-300">Cross-links:</span>
+                <span onclick="openDeepDive('fivew')" class="badge-ref underline decoration-indigo-400 text-indigo-600 dark:text-indigo-400">5W Direction</span> • 
+                <span onclick="openDeepDive('multiply')" class="badge-ref underline decoration-rose-400 text-rose-600 dark:text-rose-400">Multiply (Explosive Growth)</span>
+              </div>
+            </div>
+            <div class="p-4 bg-slate-50/70 dark:bg-slate-850/50 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span class="text-xs text-slate-500">Full breakdown of all 21 laws</span>
+              <button onclick="openDeepDive('maxwell')" class="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold shadow transition flex items-center gap-1.5">
+                Full Deep Dive <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: 5W FRAMEWORK -->
+        <div class="deepdive-card" data-category="leadership">
+          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col h-full hover:border-indigo-500/50 transition">
+            <div class="p-6 border-b border-slate-100 dark:border-slate-800/80 bg-gradient-to-r from-indigo-500/5 to-transparent flex items-start justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-lg">
+                  <i class="fa-solid fa-crosshairs"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Strategic Clarity</span>
+                  <h2 class="text-xl font-bold font-heading text-slate-900 dark:text-white">The 5W Framework</h2>
+                </div>
+              </div>
+              <span class="text-xs font-semibold px-2 py-1 rounded bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300">5 Questions</span>
+            </div>
+            <div class="p-6 flex-grow space-y-4 text-sm text-slate-600 dark:text-slate-300">
+              <p>
+                <strong>Core Premise:</strong> Ambiguity is the enemy of execution and spiritual vitality. The 5W framework (Who, What, Where, When, Why) aligns divine identity with operational cadence.
+              </p>
+              <div class="bg-slate-50 dark:bg-slate-800/50 p-3.5 rounded-xl border border-slate-200/70 dark:border-slate-700/60 space-y-1 text-xs">
+                <div><strong>1. WHO:</strong> Identity under God & the core team entrusted to you.</div>
+                <div><strong>2. WHAT:</strong> The clear, unambiguous mandate/deliverable.</div>
+                <div><strong>3. WHERE:</strong> The mission field, cultural context, and relational ecosystem.</div>
+                <div><strong>4. WHEN:</strong> Discerning Kairos (divine timing) vs. Chronos (clock time).</div>
+                <div><strong>5. WHY:</strong> The transcendent purpose that withstands crisis and sacrifice.</div>
+              </div>
+              <div class="flex flex-wrap gap-1 text-xs text-slate-500">
+                <span class="font-medium text-slate-700 dark:text-slate-300">Cross-links:</span>
+                <span onclick="openDeepDive('biglife')" class="badge-ref underline decoration-teal-400 text-teal-600 dark:text-teal-400">Big.Life Action Plans</span> • 
+                <span onclick="openDeepDive('fullyalive')" class="badge-ref underline decoration-emerald-400 text-emerald-600 dark:text-emerald-400">Fully Alive "Why"</span>
+              </div>
+            </div>
+            <div class="p-4 bg-slate-50/70 dark:bg-slate-850/50 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span class="text-xs text-slate-500">Alignment & execution questions</span>
+              <button onclick="openDeepDive('fivew')" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow transition flex items-center gap-1.5">
+                Full Deep Dive <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: FULLY ALIVE -->
+        <div class="deepdive-card" data-category="personal">
+          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col h-full hover:border-emerald-500/50 transition">
+            <div class="p-6 border-b border-slate-100 dark:border-slate-800/80 bg-gradient-to-r from-emerald-500/5 to-transparent flex items-start justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-lg">
+                  <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Wholeness & Marketplace Impact</span>
+                  <h2 class="text-xl font-bold font-heading text-slate-900 dark:text-white">Fully Alive: T.R.A.I.N. (5T+5W+5M)</h2>
+                </div>
+              </div>
+              <span class="text-xs font-semibold px-2 py-1 rounded bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300">5T + 5W + 5M</span>
+            </div>
+            <div class="p-6 flex-grow space-y-4 text-sm text-slate-600 dark:text-slate-300">
+              <p>
+                <strong>Core Premise:</strong> Bridge the gap between "Sunday faith" and "Monday reality." Move from passive survival to active Kingdom impact by dismantling the sacred-secular divide across peer groups and leadership circles.
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+                <div class="p-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200/50 dark:border-emerald-800/40">
+                  <span class="font-bold text-emerald-800 dark:text-emerald-300 block mb-1">5T (Top Tensions)</span>
+                  Comfort vs Calling, Scarcity vs Abundance, Performance vs Purpose.
+                </div>
+                <div class="p-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200/50 dark:border-emerald-800/40">
+                  <span class="font-bold text-emerald-800 dark:text-emerald-300 block mb-1">5W (Wholeness)</span>
+                  Work, Worship, Wealth, Wisdom, and Wellness.
+                </div>
+                <div class="p-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200/50 dark:border-emerald-800/40">
+                  <span class="font-bold text-emerald-800 dark:text-emerald-300 block mb-1">5M (Daily Mantras)</span>
+                  Be Branch, Catch Wind, Grip Plow, Wreck Roof, Empty Jar.
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1 text-xs text-slate-500">
+                <span class="font-medium text-slate-700 dark:text-slate-300">Cross-links:</span>
+                <span onclick="openDeepDive('tensions')" class="badge-ref underline decoration-amber-400 text-amber-600 dark:text-amber-400">My Tensions (Polarities)</span> • 
+                <span onclick="openDeepDive('multiply')" class="badge-ref underline decoration-rose-400 text-rose-600 dark:text-rose-400">Multiply (Talent Multiplication)</span>
+              </div>
+            </div>
+            <div class="p-4 bg-slate-50/70 dark:bg-slate-850/50 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span class="text-xs text-slate-500">Includes T.R.A.I.N. Retreat Agenda</span>
+              <button onclick="openDeepDive('fullyalive')" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow transition flex items-center gap-1.5">
+                Full Deep Dive <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4: MY TENSIONS -->
+        <div class="deepdive-card" data-category="personal">
+          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col h-full hover:border-amber-500/50 transition">
+            <div class="p-6 border-b border-slate-100 dark:border-slate-800/80 bg-gradient-to-r from-amber-500/5 to-transparent flex items-start justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-amber-100 dark:bg-amber-900/50 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-lg">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Andy Stanley • Polarity Management</span>
+                  <h2 class="text-xl font-bold font-heading text-slate-900 dark:text-white">My Tensions (Andy Stanley)</h2>
+                </div>
+              </div>
+              <span class="text-xs font-semibold px-2 py-1 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">Polarity Navigation</span>
+            </div>
+            <div class="p-6 flex-grow space-y-4 text-sm text-slate-600 dark:text-slate-300">
+              <p>
+                <strong>Core Premise:</strong> Immature leaders try to "solve" problems that are actually persistent tensions to be navigated (Andy Stanley / Polarity Management principle).
+              </p>
+              <div class="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-200/70 dark:border-slate-700/60 space-y-1 text-xs">
+                <div>• <strong>Grace vs. Truth:</strong> High standards with unconditional love.</div>
+                <div>• <strong>Rest (Sabbath) vs. Bold Labor:</strong> Trusting sovereignty while working diligently.</div>
+                <div>• <strong>Freedom vs. Accountability:</strong> Autonomous micro-groups with doctrinal fidelity.</div>
+                <div>• <strong>Present Contentment vs. Holy Ambition:</strong> Grateful now, pressing forward.</div>
+              </div>
+              <div class="flex flex-wrap gap-1 text-xs text-slate-500">
+                <span class="font-medium text-slate-700 dark:text-slate-300">Cross-links:</span>
+                <span onclick="openDeepDive('wearechurch')" class="badge-ref underline decoration-purple-400 text-purple-600 dark:text-purple-400">We Are Church (Freedom vs Order)</span> • 
+                <span onclick="openDeepDive('maxwell')" class="badge-ref underline decoration-sky-400 text-sky-600 dark:text-sky-400">Law of Navigation</span>
+              </div>
+            </div>
+            <div class="p-4 bg-slate-50/70 dark:bg-slate-850/50 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span class="text-xs text-slate-500">Polarity mapping protocol</span>
+              <button onclick="openDeepDive('tensions')" class="px-4 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white text-xs font-semibold shadow transition flex items-center gap-1.5">
+                Full Deep Dive <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5: MULTIPLY BY BEVERE / CHAN -->
+        <div class="deepdive-card" data-category="discipleship">
+          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col h-full hover:border-rose-500/50 transition">
+            <div class="p-6 border-b border-slate-100 dark:border-slate-800/80 bg-gradient-to-r from-rose-500/5 to-transparent flex items-start justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold text-lg">
+                  <i class="fa-solid fa-dna"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">John Bevere & Francis Chan</span>
+                  <h2 class="text-xl font-bold font-heading text-slate-900 dark:text-white">Multiply (Bevere & Chan)</h2>
+                </div>
+              </div>
+              <span class="text-xs font-semibold px-2 py-1 rounded bg-rose-100 dark:bg-rose-900/40 text-rose-700 dark:text-rose-300">Making Disciples</span>
+            </div>
+            <div class="p-6 flex-grow space-y-4 text-sm text-slate-600 dark:text-slate-300">
+              <p>
+                <strong>Core Premise:</strong> The Great Commission is non-negotiable for every believer. Combines John Bevere's uncompromising eternal perspective & holy reverence (*Driven by Eternity*, *Bait of Satan*) with Francis Chan's *Multiply* mandate.
+              </p>
+              <ul class="text-xs space-y-1.5 list-disc list-inside text-slate-600 dark:text-slate-300">
+                <li><strong>The Eternal Dimension:</strong> Earth is a vapor; leadership decisions echo into eternity.</li>
+                <li><strong>Eliminating the Lay/Clergy Divide:</strong> Every follower is ordained to reproduce.</li>
+                <li><strong>Freedom from Offense:</strong> The bait of Satan destroys teams; walk in quick forgiveness.</li>
+                <li><strong>Simple Transmission:</strong> Teach others to obey all Christ commanded.</li>
+              </ul>
+              <div class="flex flex-wrap gap-1 text-xs text-slate-500">
+                <span class="font-medium text-slate-700 dark:text-slate-300">Cross-links:</span>
+                <span onclick="openDeepDive('biglife')" class="badge-ref underline decoration-teal-400 text-teal-600 dark:text-teal-400">Big.Life Multiplication</span> • 
+                <span onclick="openDeepDive('maxwell')" class="badge-ref underline decoration-sky-400 text-sky-600 dark:text-sky-400">Law of Explosive Growth</span>
+              </div>
+            </div>
+            <div class="p-4 bg-slate-50/70 dark:bg-slate-850/50 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span class="text-xs text-slate-500">Eternal perspective playbook</span>
+              <button onclick="openDeepDive('multiply')" class="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-semibold shadow transition flex items-center gap-1.5">
+                Full Deep Dive <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6: BIG.LIFE -->
+        <div class="deepdive-card" data-category="discipleship">
+          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col h-full hover:border-teal-500/50 transition">
+            <div class="p-6 border-b border-slate-100 dark:border-slate-800/80 bg-gradient-to-r from-teal-500/5 to-transparent flex items-start justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-teal-100 dark:bg-teal-900/50 text-teal-600 dark:text-teal-400 flex items-center justify-center font-bold text-lg">
+                  <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Movement Engine</span>
+                  <h2 class="text-xl font-bold font-heading text-slate-900 dark:text-white">Big.Life (DMM Strategy)</h2>
+                </div>
+              </div>
+              <span class="text-xs font-semibold px-2 py-1 rounded bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300">3/3rds Process</span>
+            </div>
+            <div class="p-6 flex-grow space-y-4 text-sm text-slate-600 dark:text-slate-300">
+              <p>
+                <strong>Core Premise:</strong> Big.Life is a global Disciple Making Movement (DMM) catalyst. Shifts leaders from knowledge-accumulation to fast, radical <em>obedience</em> and rapid peer-to-peer multiplication.
+              </p>
+              <div class="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-200/70 dark:border-slate-700/60 text-xs space-y-1">
+                <span class="font-bold text-teal-700 dark:text-teal-400 block">The 3/3rds Discovery Group Architecture:</span>
+                <div>1. <strong>Look Back (1/3):</strong> Care, worship, accountability to last week's "I will", sharing stories.</div>
+                <div>2. <strong>Look Up (1/3):</strong> Scripture Discovery (What does it say? What does it teach about God & man?).</div>
+                <div>3. <strong>Look Ahead (1/3):</strong> Action "I will" statement, practicing sharing, interceding for lost friends.</div>
+              </div>
+              <div class="flex flex-wrap gap-1 text-xs text-slate-500">
+                <span class="font-medium text-slate-700 dark:text-slate-300">Cross-links:</span>
+                <span onclick="openDeepDive('wearechurch')" class="badge-ref underline decoration-purple-400 text-purple-600 dark:text-purple-400">We Are Church Micro Gatherings</span> • 
+                <span onclick="openDeepDive('fivew')" class="badge-ref underline decoration-indigo-400 text-indigo-600 dark:text-indigo-400">5W (Who & Where)</span>
+              </div>
+            </div>
+            <div class="p-4 bg-slate-50/70 dark:bg-slate-850/50 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span class="text-xs text-slate-500">DMM questions & 3/3rds template</span>
+              <button onclick="openDeepDive('biglife')" class="px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-xs font-semibold shadow transition flex items-center gap-1.5">
+                Full Deep Dive <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 7: WE ARE CHURCH -->
+        <div class="deepdive-card lg:col-span-2" data-category="discipleship">
+          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col h-full hover:border-purple-500/50 transition">
+            <div class="p-6 border-b border-slate-100 dark:border-slate-800/80 bg-gradient-to-r from-purple-500/5 to-transparent flex items-start justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold text-lg">
+                  <i class="fa-solid fa-house-chimney-window"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">Francis Chan</span>
+                  <h2 class="text-xl font-bold font-heading text-slate-900 dark:text-white">We Are Church (Francis Chan)</h2>
+                </div>
+              </div>
+              <span class="text-xs font-semibold px-2 py-1 rounded bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300">Decentralized House Church</span>
+            </div>
+            <div class="p-6 flex-grow grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-600 dark:text-slate-300">
+              <div class="space-y-3">
+                <p>
+                  <strong>Core Premise:</strong> Strip away consumerist church mechanics (buildings, paid superstar pastors, expensive productions) and return to the New Testament model: small, intense, intimate fellowships where every member exercises spiritual gifts.
+                </p>
+                <div class="p-3 bg-purple-50 dark:bg-purple-950/40 rounded-xl border border-purple-200/50 dark:border-purple-800/40 text-xs space-y-1">
+                  <div>• <strong>Zero Overhead:</strong> 100% of resources go toward the poor and global missions.</div>
+                  <div>• <strong>Unpaid Plural Elder Oversight:</strong> Shepherds hold day jobs like Paul the tentmaker.</div>
+                  <div>• <strong>No Audiences, Only Ministers:</strong> Gathering in living rooms (15-25 people max).</div>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <div class="text-xs text-slate-600 dark:text-slate-300 space-y-2">
+                  <div class="font-semibold text-slate-900 dark:text-white">Why It Completes the Leadership Stack:</div>
+                  <p>
+                    Maxwell's 21 Laws give leadership mechanics, 5W provides strategic clarity, Fully Alive & Tensions guard the leader's internal battery—and <em>We Are Church</em> provides the authentic soil where disciples actually love one another sacrificially.
+                  </p>
+                </div>
+                <div class="flex flex-wrap gap-1 text-xs text-slate-500 pt-2">
+                  <span class="font-medium text-slate-700 dark:text-slate-300">Cross-links:</span>
+                  <span onclick="openDeepDive('multiply')" class="badge-ref underline decoration-rose-400 text-rose-600 dark:text-rose-400">Multiply (Discipleship)</span> • 
+                  <span onclick="openDeepDive('biglife')" class="badge-ref underline decoration-teal-400 text-teal-600 dark:text-teal-400">Big.Life (Movement)</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-slate-50/70 dark:bg-slate-850/50 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span class="text-xs text-slate-500">Model manifesto, structure & governance</span>
+              <button onclick="openDeepDive('wearechurch')" class="px-4 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold shadow transition flex items-center gap-1.5">
+                Full Deep Dive <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- VIEW 3: LEADERSHIP & LIFE AUDIT TOOL -->
+    <div id="view-audit" class="hidden space-y-8 animate-fadeIn">
+      <div class="max-w-4xl mx-auto space-y-6">
+        <div class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Interactive Diagnostic</span>
+              <h1 class="text-2xl sm:text-3xl font-bold font-heading text-slate-900 dark:text-white">
+                Integrated 7-Dimension Leadership Audit
+              </h1>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+                Rate yourself honestly from 1 (Crisis/Neglect) to 5 (Exemplary/Multiplying).
+              </p>
+            </div>
+            <!-- Overall Score Indicator -->
+            <div class="bg-sky-50 dark:bg-sky-950/60 border border-sky-200 dark:border-sky-800 px-4 py-3 rounded-2xl text-center self-stretch sm:self-auto min-w-[140px]">
+              <span class="text-xs font-semibold text-sky-700 dark:text-sky-300 uppercase tracking-wider block">Total Index</span>
+              <div class="text-2xl font-black text-sky-600 dark:text-sky-400" id="audit-score-display">21 / 35</div>
+              <span class="text-[11px] font-medium text-slate-500 dark:text-slate-400" id="audit-grade">Developing Leader</span>
+            </div>
+          </div>
+
+          <!-- Questions Grid -->
+          <div class="space-y-6 pt-6" id="audit-questions-container">
+            <!-- Question 1 -->
+            <div class="audit-item space-y-2">
+              <div class="flex justify-between items-center text-sm font-semibold text-slate-900 dark:text-white">
+                <span class="flex items-center gap-2">
+                  <i class="fa-solid fa-crown text-amber-500"></i> Maxwell's Lid & Influence:
+                </span>
+                <span class="text-sky-600 dark:text-sky-400 font-bold text-sm" id="score-val-1">3 / 5</span>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400">
+                I am actively investing in my personal growth so my leadership lid does not choke my organization, and I lead via connection rather than mere title.
+              </p>
+              <input type="range" min="1" max="5" value="3" class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-sky-600" oninput="updateAuditScore()">
+            </div>
+
+            <!-- Question 2 -->
+            <div class="audit-item space-y-2">
+              <div class="flex justify-between items-center text-sm font-semibold text-slate-900 dark:text-white">
+                <span class="flex items-center gap-2">
+                  <i class="fa-solid fa-crosshairs text-indigo-500"></i> 5W Strategic Alignment:
+                </span>
+                <span class="text-sky-600 dark:text-sky-400 font-bold text-sm" id="score-val-2">3 / 5</span>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400">
+                My core circle has crystal clarity on Who we are, What we do, Where we are heading, When to strike, and Why we exist.
+              </p>
+              <input type="range" min="1" max="5" value="3" class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-sky-600" oninput="updateAuditScore()">
+            </div>
+
+            <!-- Question 3 -->
+            <div class="audit-item space-y-2">
+              <div class="flex justify-between items-center text-sm font-semibold text-slate-900 dark:text-white">
+                <span class="flex items-center gap-2">
+                  <i class="fa-solid fa-heart-pulse text-emerald-500"></i> Fully Alive (5W Wholeness & 5 Mantras):
+                </span>
+                <span class="text-sky-600 dark:text-sky-400 font-bold text-sm" id="score-val-3">3 / 5</span>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400">
+                I operate in integrated 5W Wholeness (Work, Worship, Wealth, Wisdom, Wellness) and practice the 5 Mantras (Branch, Wind, Plow, Roof, Jar) rather than compartmentalizing Sunday from Monday.
+              </p>
+              <input type="range" min="1" max="5" value="3" class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-sky-600" oninput="updateAuditScore()">
+            </div>
+
+            <!-- Question 4 -->
+            <div class="audit-item space-y-2">
+              <div class="flex justify-between items-center text-sm font-semibold text-slate-900 dark:text-white">
+                <span class="flex items-center gap-2">
+                  <i class="fa-solid fa-scale-balanced text-amber-500"></i> Managing Tensions:
+                </span>
+                <span class="text-sky-600 dark:text-sky-400 font-bold text-sm" id="score-val-4">3 / 5</span>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400">
+                I navigate paradoxical tensions (grace & truth, resting in God while working hard) without reacting in polarized frustration.
+              </p>
+              <input type="range" min="1" max="5" value="3" class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-sky-600" oninput="updateAuditScore()">
+            </div>
+
+            <!-- Question 5 -->
+            <div class="audit-item space-y-2">
+              <div class="flex justify-between items-center text-sm font-semibold text-slate-900 dark:text-white">
+                <span class="flex items-center gap-2">
+                  <i class="fa-solid fa-dna text-rose-500"></i> Multiply Discipleship:
+                </span>
+                <span class="text-sky-600 dark:text-sky-400 font-bold text-sm" id="score-val-5">3 / 5</span>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400">
+                I am actively pouring my life into 2-3 specific people who are being equipped to teach and disciple others, keeping eternity front of mind.
+              </p>
+              <input type="range" min="1" max="5" value="3" class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-sky-600" oninput="updateAuditScore()">
+            </div>
+
+            <!-- Question 6 -->
+            <div class="audit-item space-y-2">
+              <div class="flex justify-between items-center text-sm font-semibold text-slate-900 dark:text-white">
+                <span class="flex items-center gap-2">
+                  <i class="fa-solid fa-network-wired text-teal-500"></i> Big.Life 3/3rds Obedience:
+                </span>
+                <span class="text-sky-600 dark:text-sky-400 font-bold text-sm" id="score-val-6">3 / 5</span>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400">
+                My groups emphasize fast obedience ("I will") and mutual accountability rather than merely collecting abstract biblical information.
+              </p>
+              <input type="range" min="1" max="5" value="3" class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-sky-600" oninput="updateAuditScore()">
+            </div>
+
+            <!-- Question 7 -->
+            <div class="audit-item space-y-2">
+              <div class="flex justify-between items-center text-sm font-semibold text-slate-900 dark:text-white">
+                <span class="flex items-center gap-2">
+                  <i class="fa-solid fa-house-chimney-window text-purple-500"></i> We Are Church Ecclesial Simplicity:
+                </span>
+                <span class="text-sky-600 dark:text-sky-400 font-bold text-sm" id="score-val-7">3 / 5</span>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400">
+                I foster deep, unpretentious community where every believer exercises their spiritual gifts and resources are channeled directly to Kingdom mission.
+              </p>
+              <input type="range" min="1" max="5" value="3" class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-sky-600" oninput="updateAuditScore()">
+            </div>
+          </div>
+
+          <!-- Dynamic Action Recommendation Card -->
+          <div class="mt-8 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700" id="audit-feedback-box">
+            <h3 class="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-lightbulb text-amber-500"></i> Tailored Prescription
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed" id="audit-feedback-text">
+              Your leadership foundation is balanced, but the bottleneck typically lies between holding internal vitality (Fully Alive) and releasing control to decentralized leaders (We Are Church & Big.Life).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 4: FIELD MATRIX & CHEAT SHEET -->
+    <div id="view-matrix" class="hidden space-y-8 animate-fadeIn">
+      <div class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Quick Reference</span>
+            <h1 class="text-2xl sm:text-3xl font-bold font-heading text-slate-900 dark:text-white">
+              The Field Executive Cheat Sheet
+            </h1>
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+              High-yield summary points designed for weekly review, staff discipleship, and personal refocusing.
+            </p>
+          </div>
+          <button onclick="window.print()" class="px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-medium border border-slate-200 dark:border-slate-700 transition flex items-center gap-2 self-start sm:self-auto">
+            <i class="fa-solid fa-print"></i> Print Cheat Sheet
+          </button>
+        </div>
+
+        <!-- 7 Cards in a Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Item 1 -->
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-sky-600 dark:text-sky-400 uppercase">John C. Maxwell</span>
+              <span class="text-[11px] font-mono text-slate-400">21 Laws</span>
+            </div>
+            <h3 class="font-bold text-base text-slate-900 dark:text-white">Influence & Catalytic Growth</h3>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1">
+              <li>• Never lead by position; lead by respect and solid ground.</li>
+              <li>• The Lid Law: Your skill level caps everyone under you.</li>
+              <li>• Victory is non-negotiable for true leaders.</li>
+              <li>• Multiply leaders, not just followers (Explosive Growth).</li>
+            </ul>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase">The 5W Engine</span>
+              <span class="text-[11px] font-mono text-slate-400">Alignment</span>
+            </div>
+            <h3 class="font-bold text-base text-slate-900 dark:text-white">Strategic Compass</h3>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1">
+              <li>• <strong>Who:</strong> Clarify core disciples and identity.</li>
+              <li>• <strong>What:</strong> Pinpoint measurable Kingdom mandate.</li>
+              <li>• <strong>Where:</strong> Know the cultural landscape and field.</li>
+              <li>• <strong>When:</strong> Align with divine Kairos timing.</li>
+              <li>• <strong>Why:</strong> Never lose the heart-burning gospel motive.</li>
+            </ul>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase">Fully Alive (T.R.A.I.N.)</span>
+              <span class="text-[11px] font-mono text-slate-400">5T + 5W + 5M</span>
+            </div>
+            <h3 class="font-bold text-base text-slate-900 dark:text-white">5W Wholeness & Daily Mantras</h3>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1">
+              <li>• <strong>Target the Tension:</strong> Calling vs. Comfort, Abundance vs. Scarcity.</li>
+              <li>• <strong>5W Wholeness:</strong> Work, Worship, Wealth, Wisdom, Wellness.</li>
+              <li>• <strong>5 Mantras:</strong> Branch (Abide), Wind (Spirit), Plow (Work), Roof (Faith), Jar (Pour out).</li>
+              <li>• <strong>WELL Done:</strong> Move from burnout to breakthrough in marketplace.</li>
+            </ul>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase">Andy Stanley</span>
+              <span class="text-[11px] font-mono text-slate-400">Polarities</span>
+            </div>
+            <h3 class="font-bold text-base text-slate-900 dark:text-white">Living in the Tension (My Tensions)</h3>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1">
+              <li>• Tensions are healthy realities to steward, not eliminate.</li>
+              <li>• Truth without Grace kills; Grace without Truth rots.</li>
+              <li>• Rest is not earned; it is commanded and foundational.</li>
+              <li>• High standards paired with deep forgiveness.</li>
+            </ul>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-rose-600 dark:text-rose-400 uppercase">John Bevere & Francis Chan</span>
+              <span class="text-[11px] font-mono text-slate-400">Multiply</span>
+            </div>
+            <h3 class="font-bold text-base text-slate-900 dark:text-white">Eternal Reproduction</h3>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1">
+              <li>• Live with the Judgment Seat of Christ in view.</li>
+              <li>• Discipleship is not classroom lecturing; it is life transfer.</li>
+              <li>• Guard your spirit against offense (the snare of Satan).</li>
+              <li>• Measure success by disciples who make disciples.</li>
+            </ul>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase">Big.Life</span>
+              <span class="text-[11px] font-mono text-slate-400">Movement DMM</span>
+            </div>
+            <h3 class="font-bold text-base text-slate-900 dark:text-white">3/3rds Obedience Model</h3>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1">
+              <li>• Look Back: Celebrate and hold accountable last week's "I will".</li>
+              <li>• Look Up: Discover the passage (No outside commentary needed).</li>
+              <li>• Look Ahead: Formulate specific "I will obey this week" action.</li>
+              <li>• Always train the next generation from day one.</li>
+            </ul>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2 lg:col-span-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-purple-600 dark:text-purple-400 uppercase">Francis Chan</span>
+              <span class="text-[11px] font-mono text-slate-400">We Are Church</span>
+            </div>
+            <h3 class="font-bold text-base text-slate-900 dark:text-white">Decentralized Biblical Ecclesia</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Every home a sanctuary, every disciple a priest. By refusing building debt and clerical hierarchies, communities enjoy radical agape love, elder accountability, and direct funding of the poor and unreached.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- MODAL / DRAWER FOR COMPREHENSIVE DEEP DIVES -->
+  <div id="deepdive-modal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-950/70 backdrop-blur-sm p-4 sm:p-6 lg:p-10">
+    <div class="max-w-4xl mx-auto bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden transition-all my-6 animate-scaleUp">
+      
+      <!-- Modal Header -->
+      <div id="modal-header-container" class="p-6 sm:p-8 border-b border-slate-200 dark:border-slate-800 flex items-start justify-between bg-slate-50 dark:bg-slate-850">
+        <div class="flex items-center gap-4">
+          <div id="modal-icon-wrapper" class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
+            <!-- Injected icon -->
+          </div>
+          <div>
+            <span id="modal-category-badge" class="text-xs font-bold uppercase tracking-wider">
+              <!-- Injected category -->
+            </span>
+            <h2 id="modal-title" class="text-2xl sm:text-3xl font-bold font-heading text-slate-900 dark:text-white">
+              <!-- Injected Title -->
+            </h2>
+          </div>
+        </div>
+        <button onclick="closeDeepDiveModal()" class="p-2.5 rounded-full text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800 transition">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body Content -->
+      <div id="modal-body-content" class="p-6 sm:p-8 space-y-6 max-h-[72vh] overflow-y-auto">
+        <!-- Injected Deep Dive Content -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 sm:p-6 bg-slate-50 dark:bg-slate-850 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
+        <div class="text-xs text-slate-500 flex items-center gap-1.5">
+          <i class="fa-solid fa-circle-nodes text-sky-500"></i> Integrated Reference Link
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="copyCurrentDeepDiveSummary()" class="px-3.5 py-1.5 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-200 transition flex items-center gap-1.5">
+            <i class="fa-solid fa-copy"></i> Copy Key Summary
+          </button>
+          <button onclick="closeDeepDiveModal()" class="px-4 py-1.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-xs font-semibold text-white shadow transition">
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEARCH MODAL -->
+  <div id="search-modal" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-sm p-4 flex items-start justify-center pt-16 sm:pt-24">
+    <div class="w-full max-w-2xl bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden animate-scaleUp">
+      <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center gap-3">
+        <i class="fa-solid fa-magnifying-glass text-slate-400"></i>
+        <input id="search-input" type="text" placeholder="Search laws, frameworks, tensions, or concepts (e.g. Lid, 3/3rds, Sabbath)..." class="w-full bg-transparent border-none text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none text-sm sm:text-base" oninput="executeSearch(this.value)">
+        <button onclick="toggleSearchModal(false)" class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white">
+          ESC
+        </button>
+      </div>
+      <div id="search-results-list" class="max-h-96 overflow-y-auto p-3 divide-y divide-slate-100 dark:divide-slate-800">
+        <div class="p-4 text-center text-xs text-slate-400">Type a keyword to explore cross-framework connections...</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-message" class="fixed bottom-5 right-5 z-50 hidden px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-medium shadow-lg border border-slate-700 flex items-center gap-2">
+    <i class="fa-solid fa-check text-emerald-400"></i>
+    <span id="toast-text">Action completed</span>
+  </div>
+
+  <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 mt-12 py-6 text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>
+        Integrated Leadership & Discipleship Guide • Built for transformational leaders and multiplying disciple-makers.
+      </p>
+      <div class="flex items-center gap-4 text-slate-400">
+        <span>John C. Maxwell • 5W • Fully Alive (T.R.A.I.N.) • Andy Stanley (Tensions) • John Bevere & Francis Chan (Multiply) • Big.Life • Francis Chan (We Are Church)</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // --- COMPREHENSIVE DATA DICTIONARY FOR THE 7 TEACHINGS ---
+    const DEEP_DIVES_DATA = {
+      maxwell: {
+        title: "John C. Maxwell: The 21 Irrefutable Laws of Leadership",
+        category: "Leadership Influence & Catalytic Growth (John C. Maxwell)",
+        colorClass: "bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 border-sky-300 dark:border-sky-800",
+        icon: "fa-solid fa-crown",
+        summary: "Leadership ability is the lid that determines a person's level of effectiveness. Influence is not conferred by title or power; it is earned daily through character, navigation, and multiplying leaders.",
+        sections: [
+          {
+            heading: "The Core Philosophy",
+            content: "John C. Maxwell establishes that true leadership is pure influence. If you think you are leading but no one is following, you are simply taking a walk. These 21 universal laws cannot be bypassed without suffering proportionate organizational and relational collapse."
+          },
+          {
+            heading: "Detailed Breakdown of All 21 Irrefutable Laws",
+            content: `
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3 text-xs">
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">1. The Law of the Lid:</span> Leadership ability determines a person's level of effectiveness. To increase results, lift the lid.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">2. The Law of Influence:</span> The true measure of leadership is influence—nothing more, nothing less. Position does not make the leader.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">3. The Law of Process:</span> Leadership develops daily, not in a day. Champions are made over years of unnoticed disciplined reps.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">4. The Law of Navigation:</span> Anyone can steer the ship, but it takes a leader to chart the course with foresight and realism.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">5. The Law of Addition:</span> Leaders add value by serving others. True leadership is not about how far we advance ourselves.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">6. The Law of Solid Ground:</span> Trust is the foundation of leadership. Good character makes trust possible, and trust makes leadership possible.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">7. The Law of Respect:</span> People naturally follow leaders stronger than themselves in character and competence.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">8. The Law of Intuition:</span> Leaders evaluate everything with a leadership bias and gut instincts sharpened by experience.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">9. The Law of Magnetism:</span> Who you are is who you attract. If you want better people on your team, elevate yourself.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">10. The Law of Connection:</span> Leaders touch a heart before they ask for a hand. Connect on an emotional and personal level.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">11. The Law of the Inner Circle:</span> A leader's potential is determined by those closest to him or her. Prune and sharpen your inner five.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">12. The Law of Empowerment:</span> Only secure leaders give power away. Insecure leaders hoard authority and create dependencies.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">13. The Law of the Picture:</span> People do what people see. Model the exact behavior, passion, and humility you expect from the team.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">14. The Law of Buy-In:</span> People buy into the leader first, then into the vision. Without personal trust, the best strategy will fail.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">15. The Law of Victory:</span> Leaders find a way for the team to win. Defeat is unacceptable; good leaders rally everyone through crisis.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">16. The Law of the Big Mo:</span> Momentum is a leader's best friend. With momentum, small problems disappear; without it, small obstacles feel fatal.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">17. The Law of Priorities:</span> Leaders understand that activity is not necessarily accomplishment. Focus 80% on the top 20% priorities.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">18. The Law of Sacrifice:</span> A leader must give up to go up. The higher the level of leadership, the fewer rights you possess.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">19. The Law of Timing:</span> When to lead is as important as what to do and where to go. Right action at the wrong time brings disaster.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">20. The Law of Explosive Growth:</span> To add growth, lead followers. To multiply growth, lead leaders who reproduce other leaders.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-sky-600 dark:text-sky-400">21. The Law of Legacy:</span> A leader's lasting value is measured by succession. Did you build something that outlives you?
+                </div>
+              </div>
+            `
+          },
+          {
+            heading: "Cross-Integration with Discipleship & Vitality",
+            content: "Maxwell's <strong>Law of Explosive Growth (Law 20)</strong> directly mirrors the <strong>Big.Life</strong> and <strong>Multiply</strong> principles: addition builds crowds, multiplication starts movements. Meanwhile, the <strong>Law of the Lid (Law 1)</strong> requires <strong>Fully Alive</strong> whole-person wellness—if you are depleted emotionally or spiritually, your lid smothers everyone."
+          }
+        ]
+      },
+
+      fivew: {
+        title: "The 5W Leadership & Life Architecture",
+        category: "Strategic Direction & Clarity",
+        colorClass: "bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 border-indigo-300 dark:border-indigo-800",
+        icon: "fa-solid fa-crosshairs",
+        summary: "The 5W framework provides ruthless clarity to cut through distraction, emotional fatigue, and mission drift. Before initiating any action, evaluate: Who, What, Where, When, and Why.",
+        sections: [
+          {
+            heading: "The 5 Questions Unpacked",
+            content: `
+              <div class="space-y-3 mt-2 text-xs sm:text-sm">
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-indigo-600 dark:text-indigo-400">1. WHO (Identity & Covenant Circle):</strong>
+                  <p class="mt-1 text-slate-600 dark:text-slate-300">Who am I in God before doing anything? Who are the specific individuals God has called me to pour into? Who is in my inner council, and who needs to be released?</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-indigo-600 dark:text-indigo-400">2. WHAT (Singular Mandate & Deliverable):</strong>
+                  <p class="mt-1 text-slate-600 dark:text-slate-300">What is the exact work? Not vague aspirations, but the clear assignment. If you chase two rabbits, both escape.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-indigo-600 dark:text-indigo-400">3. WHERE (Context & Strategic Sphere):</strong>
+                  <p class="mt-1 text-slate-600 dark:text-slate-300">Where is the geographical, digital, or relational mission field? Understanding your soil prevents sowing seed on concrete.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-indigo-600 dark:text-indigo-400">4. WHEN (Kairos Timing & Rhythm):</strong>
+                  <p class="mt-1 text-slate-600 dark:text-slate-300">Discerning Chronos (calendar minutes) vs. Kairos (God's opportune season). Knowing when to wait on God and when to act decisively.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-indigo-600 dark:text-indigo-400">5. WHY (The Sacred Engine of Motive):</strong>
+                  <p class="mt-1 text-slate-600 dark:text-slate-300">The deep 'Why' survives hardships, isolation, and failure. If your 'Why' is ego or applause, you will fold when persecution arises.</p>
+                </div>
+              </div>
+            `
+          },
+          {
+            heading: "How 5W Anchors Discipleship & House Churches",
+            content: "In <strong>We Are Church</strong> and <strong>Big.Life</strong>, the 5W framework keeps groups from devolving into rambling social clubs. It forces every micro-church to name <em>Who</em> they are reaching, <em>What</em> scripture they will obey, and <em>Why</em> the Kingdom requires their urgent mobilization."
+          }
+        ]
+      },
+
+      fullyalive: {
+        title: "Fully Alive: T.R.A.I.N. (5T + 5W + 5M)",
+        category: "Whole-Life Discipleship & Marketplace Vitality",
+        colorClass: "bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 border-emerald-300 dark:border-emerald-800",
+        icon: "fa-solid fa-heart-pulse",
+        summary: "The comprehensive client-facing framework for Tier 1 (Peer Groups) and Tier 2 (Leadership Circles). Bridges the gap between 'Sunday faith' and 'Monday reality' to move leaders from merely surviving to living Fully Alive through T.R.A.I.N. (5 Tensions + 5 Wholeness + 5 Mantras).",
+        sections: [
+          {
+            heading: "Program Goal & The Client Promise",
+            content: `
+              <p>Dismantle the toxic sacred-secular divide. We do not just meet; we <strong>T.R.A.I.N.</strong> to operationalize <em>5W Wholeness</em> and the <em>WELL Done</em> architecture.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-3 text-xs">
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-emerald-600 dark:text-emerald-400 block mb-1">1. Stop Compartmentalizing</strong>
+                  Break the divide between Sunday worship and Monday marketplace reality.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-emerald-600 dark:text-emerald-400 block mb-1">2. Start Multiplying</strong>
+                  Move from saving talents to multiplying them through Kingdom Entrepreneurship.
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-emerald-600 dark:text-emerald-400 block mb-1">3. Stay Sustained</strong>
+                  Use the WELL Done framework to move from chronic burnout to sustained breakthrough.
+                </div>
+              </div>
+              <p class="text-xs italic text-slate-500 dark:text-slate-400 mt-2 font-medium">"We don't build mega-churches, we build mega-lives."</p>
+            `
+          },
+          {
+            heading: "The 5-Step T.R.A.I.N. Flow",
+            content: `
+              <div class="space-y-3 mt-2 text-xs sm:text-sm">
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-emerald-600 dark:text-emerald-400 text-sm">T – Target the Tension:</strong>
+                  <p class="text-slate-600 dark:text-slate-300 mt-1">Every breakthrough begins by identifying the conflict between current reality and Kingdom design. Identify which of the <strong>Top 5 Tensions (5T)</strong> limits capacity (e.g., <em>Comfort vs. Calling, Scarcity vs. Abundance, Performance vs. Purpose</em>). Shift from 'engineered problems' (busyness) to true Kingdom Assignments.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-emerald-600 dark:text-emerald-400 text-sm">R – Reveal the Perspective Shift:</strong>
+                  <p class="text-slate-600 dark:text-slate-300 mt-1">Replace limiting mindsets with <em>Biblical Intelligence</em>. Introduce the specific <strong>WELL Done</strong> dimension relevant to the tension. If the tension is Fear of Man (Performance), reveal <em>Worship</em> (Fear of the Lord). If Scarcity, reveal <em>Legacy</em> (shifting from saving talents to multiplying them). Stop 'doing church' and start 'being the church' in the marketplace.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-emerald-600 dark:text-emerald-400 text-sm">A – Activate the Mantras (5M):</strong>
+                  <p class="text-slate-600 dark:text-slate-300 mt-1">Move from theory to spiritual discipline using the Wellness dimension. Apply the <strong>5 Daily Mantras</strong> so the leader's vessel sustains the calling: <em>Be the Branch, Catch the Wind, Grip the Plow, Wreck the Roof, Empty the Jar</em>. Honor God with body, mind, and emotions through healthy rhythms.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-emerald-600 dark:text-emerald-400 text-sm">I – Integrate the 5Ws (5 Wholeness):</strong>
+                  <p class="text-slate-600 dark:text-slate-300 mt-1">Ensure every solution is holistic, not compartmentalized across the five Wholeness domains:
+                  <br/>• <strong>Worship:</strong> How does this decision honor God?
+                  <br/>• <strong>Work:</strong> How does this execute excellence in the marketplace?
+                  <br/>• <strong>Wealth:</strong> How does this steward resources for Kingdom Legacy?
+                  <br/>• <strong>Wisdom:</strong> How does this align with your Family Benediction?
+                  <br/>• <strong>Wellness:</strong> Does this sustain your physical and emotional health?</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-emerald-600 dark:text-emerald-400 text-sm">N – Navigate the Next Steps:</strong>
+                  <p class="text-slate-600 dark:text-slate-300 mt-1">Concrete accountability and marketplace application. Define 'Achievements that matter' vs. mere activity. Identify 'Ordered Steps' by reviewing providences and prophetic confirmations. Leave with a measurable plan to impact your industry and community.</p>
+                </div>
+              </div>
+            `
+          },
+          {
+            heading: "The 5M Mantras in Action",
+            content: `
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-emerald-600 dark:text-emerald-400">1. Be the Branch:</span>
+                  <p class="text-slate-600 dark:text-slate-300 mt-0.5">Abide in the Vine (John 15). Discard striving in the flesh; all supernatural fruit originates from intimate connection with Christ.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-emerald-600 dark:text-emerald-400">2. Catch the Wind:</span>
+                  <p class="text-slate-600 dark:text-slate-300 mt-0.5">Sensitivity to the Ruach (Holy Spirit). Hoist your sails when God moves; discern divine Kairos timing over human hustle.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-emerald-600 dark:text-emerald-400">3. Grip the Plow:</span>
+                  <p class="text-slate-600 dark:text-slate-300 mt-0.5">Relentless marketplace diligence and craftsmanship. Never looking back; working heartily as unto the Lord with superior skill.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-emerald-600 dark:text-emerald-400">4. Wreck the Roof:</span>
+                  <p class="text-slate-600 dark:text-slate-300 mt-0.5">Audacious, unconventional faith (Mark 2). Breaking obstacles and protocols to bring broken friends into the healing presence of Jesus.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 sm:col-span-2">
+                  <span class="font-bold text-emerald-600 dark:text-emerald-400">5. Empty the Jar:</span>
+                  <p class="text-slate-600 dark:text-slate-300 mt-0.5">Extravagant pouring out (alabaster jar). Holding nothing back; stewarding wealth, talents, and energy for eternal Kingdom impact.</p>
+                </div>
+              </div>
+            `
+          },
+          {
+            heading: "Sample Session Agenda: 'The Wealth & Legacy Module'",
+            content: `
+              <div class="space-y-2 text-xs">
+                <div class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800">
+                  <strong>Phase 1: TARGET (30 Mins):</strong> Scarcity vs. Abundance Tension. "Where are you hoarding resources (talent, time, money) out of fear rather than distributing for impact?" Conduct accumulation vs. distribution audit.
+                </div>
+                <div class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800">
+                  <strong>Phase 2: REVEAL (45 Mins):</strong> The Legacy (L) dimension of WELL Done. 'Trade & RE-SURGE'. Shift from poverty mindset to Kingdom prosperity where wealth is a tool to break generational poverty and fund mission.
+                </div>
+                <div class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800">
+                  <strong>Phase 3: ACTIVATE (45 Mins):</strong> Focus on <em>Grip the Plow</em> (Work/Diligence) & <em>Empty the Jar</em> (Generosity). Draft the 'Family Benediction' to pass down values, not just valuables.
+                </div>
+                <div class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800">
+                  <strong>Phase 4: INTEGRATE (45 Mins):</strong> Peer Hot Seat. Members present business/financial decisions and critique them through the 5Ws (Is it wise? Does it honor wellness? Is it worship or performance?).
+                </div>
+                <div class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800">
+                  <strong>Phase 5: NAVIGATE (15 Mins):</strong> Kingdom Assignment commissioning. Identify one Gospel Patronage opportunity or business revenue stream to bless flourishing families; pray for Ordered Steps.
+                </div>
+              </div>
+            `
+          }
+        ]
+      },
+
+      tensions: {
+        title: "My Tensions: Polarity Management (Andy Stanley)",
+        category: "Internal Equilibrium & Wisdom (Andy Stanley)",
+        colorClass: "bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 border-amber-300 dark:border-amber-800",
+        icon: "fa-solid fa-scale-balanced",
+        summary: "Immature leaders view every paradox as a problem to be solved, leading to extreme pendulums. Mature leaders understand tensions must be stewarded, balanced, and preserved (Andy Stanley / Polarity Management).",
+        sections: [
+          {
+            heading: "Problem to Solve vs. Tension to Manage",
+            content: "A problem has a clean, final solution (e.g., a broken flat tire). A tension has two interdependent positive values that need each other (e.g., breathing in vs. breathing out; truth vs. grace). If you 'solve' a tension by choosing one side permanently, you destroy the organism."
+          },
+          {
+            heading: "The 4 Crucial Leadership Tensions",
+            content: `
+              <div class="space-y-3 mt-2 text-xs sm:text-sm">
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-amber-600 dark:text-amber-400">Tension 1: Grace vs. Truth</strong>
+                  <p class="text-slate-600 dark:text-slate-300 mt-1">Truth without Grace breeds cruel legalism that repels seekers. Grace without Truth produces moral decay and lawlessness. Jesus was 100% full of Grace AND Truth.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-amber-600 dark:text-amber-400">Tension 2: Rest (Sabbath) vs. Urgent Mission (Labor)</strong>
+                  <p class="text-slate-600 dark:text-slate-300 mt-1">If you only rest, you become slothful and unfaithful. If you only labor, you burn out and act as if God needs you to keep the universe spinning.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-amber-600 dark:text-amber-400">Tension 3: Freedom (Decentralization) vs. Fidelity (Accountability)</strong>
+                  <p class="text-slate-600 dark:text-slate-300 mt-1">Essential for <em>We Are Church</em>: Give micro-churches autonomy to adapt, while preserving elder oversight to guard theological integrity.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-amber-600 dark:text-amber-400">Tension 4: Present Joy vs. Holy Discontent</strong>
+                  <p class="text-slate-600 dark:text-slate-300 mt-1">Rejoicing in what God has done today while aching for the unreached and hungry across the globe.</p>
+                </div>
+              </div>
+            `
+          }
+        ]
+      },
+
+      multiply: {
+        title: "Multiply: Making Disciples (John Bevere & Francis Chan)",
+        category: "Discipleship & Eternal Perspective (John Bevere & Francis Chan)",
+        colorClass: "bg-rose-100 dark:bg-rose-950 text-rose-600 dark:text-rose-400 border-rose-300 dark:border-rose-800",
+        icon: "fa-solid fa-dna",
+        summary: "The call to make disciples is not a special spiritual gift for clergy; it is the fundamental assignment of every Christian. We live under the weight of eternity.",
+        sections: [
+          {
+            heading: "The Eternal Paradigm (John Bevere's Contribution)",
+            content: "John Bevere's teachings (*Driven by Eternity*, *The Bait of Satan*, *Under Cover*) inject high reverence, holy awe, and long-range foresight into leadership. Life on earth is a mere vapor preparing us for eternal rewards and accountability before the Judgment Seat of Christ."
+          },
+          {
+            heading: "The Disciple Maker Mandate (Francis Chan's Contribution)",
+            content: "Francis Chan's *Multiply* challenges the modern church phenomenon where thousands sit passively in stadium seats listening to one professional speaker. Scripture envisions every single believer opening the Word, discipling a neighbor, baptizing them, and watching them do the same."
+          },
+          {
+            heading: "4 Keys to Multiplying Disciples",
+            content: `
+              <ul class="list-disc list-inside text-xs space-y-2 mt-2 text-slate-600 dark:text-slate-300">
+                <li><strong>No Passive Consumers:</strong> Discipleship is not a curriculum you finish; it is a life of obedience you reproduce.</li>
+                <li><strong>Unforgiveness Destroys Multiplication:</strong> Holding onto offense (Bevere's <em>Bait of Satan</em>) breaks covenant and halts spiritual transmission.</li>
+                <li><strong>Scriptural Authority:</strong> We teach people to obey Christ's words, not human traditions.</li>
+                <li><strong>Generational Intentionality:</strong> 2 Timothy 2:2 — what you heard, entrust to faithful men who will be able to teach others also (4 generations).</li>
+              </ul>
+            `
+          }
+        ]
+      },
+
+      biglife: {
+        title: "Big.Life (Disciple Making Movements / DMM)",
+        category: "Global Multiplication Methodology",
+        colorClass: "bg-teal-100 dark:bg-teal-950 text-teal-600 dark:text-teal-400 border-teal-300 dark:border-teal-800",
+        icon: "fa-solid fa-network-wired",
+        summary: "Big.Life is an international movement fueling rapid, obedience-based discipleship and church planting. Its genius lies in radically simple, reproducible 3/3rds Discovery Bible Study groups.",
+        sections: [
+          {
+            heading: "The Big.Life Paradigm Shift",
+            content: "Traditional Western ministry focuses on <em>knowledge accumulation</em> (Listen to a lecture, take notes, go home unchanged). Big.Life focuses on <em>immediate obedience</em>. Don't teach more doctrine until last week's scripture has been obeyed."
+          },
+          {
+            heading: "The 3/3rds Meeting Blueprint",
+            content: `
+              <div class="space-y-3 mt-2 text-xs">
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-teal-600 dark:text-teal-400">FIRST THIRD: Look Back (Pastoral Care & Accountability)</span>
+                  <div class="mt-1 text-slate-600 dark:text-slate-300">
+                    • <em>Worship & Thanksgiving:</em> What are we praising God for today?<br/>
+                    • <em>Mutual Care:</em> Any distress, needs, or prayer concerns?<br/>
+                    • <em>Accountability:</em> Did you obey your "I will" statement from last week? Who did you share the Gospel or story with?
+                  </div>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-teal-600 dark:text-teal-400">SECOND THIRD: Look Up (Scripture Discovery)</span>
+                  <div class="mt-1 text-slate-600 dark:text-slate-300">
+                    • Read the biblical passage twice out loud.<br/>
+                    • Someone retells the story in their own words.<br/>
+                    • Ask the 2 Discovery Questions: <em>1) What does this say about God/Jesus? 2) What does this say about humans?</em>
+                  </div>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <span class="font-bold text-teal-600 dark:text-teal-400">THIRD THIRD: Look Ahead (Obedience & Multiplication)</span>
+                  <div class="mt-1 text-slate-600 dark:text-slate-300">
+                    • <em>Obedience:</em> "If this is God's word, what must I do this week to obey it?" (Specific "I will..." action).<br/>
+                    • <em>Practice:</em> Roleplay sharing the story with a partner.<br/>
+                    • <em>Intercession:</em> Pray for the lost friends each member will speak to this week.
+                  </div>
+                </div>
+              </div>
+            `
+          }
+        ]
+      },
+
+      wearechurch: {
+        title: "We Are Church: Decentralized Ecclesia (Francis Chan)",
+        category: "Decentralized New Testament Ecclesia (Francis Chan)",
+        colorClass: "bg-purple-100 dark:bg-purple-950 text-purple-600 dark:text-purple-400 border-purple-300 dark:border-purple-800",
+        icon: "fa-solid fa-house-chimney-window",
+        summary: "A movement founded by Francis Chan to rediscover the church as a family of committed lovers of Jesus and one another, meeting in living rooms with zero debt, zero overhead, and unpaid plural elders.",
+        sections: [
+          {
+            heading: "The Radical Proposition",
+            content: "After planting and pastoring a mega-church in Simi Valley with thousands of attendees, Francis Chan stepped away. He observed that traditional churches spend millions on air conditioning, sound gear, and staff salaries, creating passive consumers who evaluate a show rather than a family loving each other to the death."
+          },
+          {
+            heading: "Core Pillars of the Model",
+            content: `
+              <div class="space-y-3 mt-2 text-xs">
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-purple-600 dark:text-purple-400">1. Micro-Church Scale (15 to 25 people):</strong>
+                  <p class="mt-1 text-slate-600 dark:text-slate-300">You cannot hide in a room of 15. Every single member must utilize their spiritual gift (Romans 12; 1 Corinthians 12). If someone falls away, everyone notices and grieves.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-purple-600 dark:text-purple-400">2. Unpaid Plural Pastors/Elders:</strong>
+                  <p class="mt-1 text-slate-600 dark:text-slate-300">Shepherds work regular marketplace jobs like Paul the tentmaker, eliminating financial pressure, careerism, and leadership entitlement.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-purple-600 dark:text-purple-400">3. Rapid Multiplication & Re-seeding:</strong>
+                  <p class="mt-1 text-slate-600 dark:text-slate-300">When a micro-church exceeds 20-25 people, it must multiply into two. Growth happens by reproduction, never by building bigger auditoriums.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <strong class="text-purple-600 dark:text-purple-400">4. 100% Resource Mobilization:</strong>
+                  <p class="mt-1 text-slate-600 dark:text-slate-300">Because there are no mortgage payments, leases, or staff packages, tithes and offerings go directly to local poverty relief and frontier unreached missions.</p>
+                </div>
+              </div>
+            `
+          }
+        ]
+      }
+    };
+
+    // --- VIEW SWITCHING LOGIC ---
+    function switchView(viewName) {
+      const views = ['integrated', 'deepdives', 'audit', 'matrix'];
+      views.forEach(v => {
+        const el = document.getElementById(`view-${v}`);
+        const btn = document.getElementById(`nav-btn-${v}`);
+        if (el) {
+          if (v === viewName) {
+            el.classList.remove('hidden');
+          } else {
+            el.classList.add('hidden');
+          }
+        }
+        if (btn) {
+          if (v === viewName) {
+            btn.className = "px-3.5 py-1.5 rounded-lg font-medium transition text-sky-700 dark:text-sky-300 bg-white dark:bg-slate-700 shadow-sm";
+          } else {
+            btn.className = "px-3.5 py-1.5 rounded-lg font-medium transition text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white";
+          }
+        }
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // --- MODAL DEEP DIVE LOGIC ---
+    let currentDeepDiveKey = '';
+
+    function openDeepDive(key) {
+      const data = DEEP_DIVES_DATA[key];
+      if (!data) return;
+      currentDeepDiveKey = key;
+
+      const modal = document.getElementById('deepdive-modal');
+      const iconWrapper = document.getElementById('modal-icon-wrapper');
+      const categoryBadge = document.getElementById('modal-category-badge');
+      const title = document.getElementById('modal-title');
+      const body = document.getElementById('modal-body-content');
+
+      // Populate Header
+      iconWrapper.className = `w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-sm ${data.colorClass}`;
+      iconWrapper.innerHTML = `<i class="${data.icon}"></i>`;
+      categoryBadge.className = `text-xs font-bold uppercase tracking-wider ${data.colorClass.split(' ')[2]}`;
+      categoryBadge.innerText = data.category;
+      title.innerText = data.title;
+
+      // Populate Body
+      let html = `
+        <div class="p-4 rounded-2xl bg-sky-50/60 dark:bg-slate-800 border border-sky-100 dark:border-slate-700 text-sm leading-relaxed text-slate-700 dark:text-slate-200">
+          <strong class="text-sky-800 dark:text-sky-300">Executive Summary:</strong> ${data.summary}
+        </div>
+      `;
+
+      data.sections.forEach(sec => {
+        html += `
+          <div class="space-y-2">
+            <h3 class="text-lg font-bold font-heading text-slate-900 dark:text-white flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-sky-500"></span> ${sec.heading}
+            </h3>
+            <div class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed space-y-2">
+              ${sec.content}
+            </div>
+          </div>
+        `;
+      });
+
+      // Add Interactive Reflection Prompt
+      html += `
+        <div class="mt-6 p-4 rounded-2xl bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 text-xs sm:text-sm space-y-2">
+          <div class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+            <i class="fa-solid fa-pen-fancy text-sky-500"></i> Personal Implementation Commitment:
+          </div>
+          <p class="text-slate-500 dark:text-slate-400">
+            Based on this framework, what is the single action or conversation you will initiate within the next 48 hours?
+          </p>
+          <input type="text" placeholder="I will commit to..." class="w-full px-3 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-100 text-xs focus:ring-2 focus:ring-sky-500 focus:outline-none">
+        </div>
+      `;
+
+      body.innerHTML = html;
+      modal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeDeepDiveModal() {
+      const modal = document.getElementById('deepdive-modal');
+      modal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function copyCurrentDeepDiveSummary() {
+      if (!currentDeepDiveKey || !DEEP_DIVES_DATA[currentDeepDiveKey]) return;
+      const data = DEEP_DIVES_DATA[currentDeepDiveKey];
+      const textToCopy = `${data.title}\nCategory: ${data.category}\n\nSummary:\n${data.summary}`;
+      
+      const tempTextArea = document.createElement('textarea');
+      tempTextArea.value = textToCopy;
+      document.body.appendChild(tempTextArea);
+      tempTextArea.select();
+      try {
+        document.execCommand('copy');
+        showToast(`Copied summary of ${data.title}`);
+      } catch (err) {
+        showToast('Unable to copy');
+      }
+      document.body.removeChild(tempTextArea);
+    }
+
+    // --- SEARCH MODAL LOGIC ---
+    function toggleSearchModal(show) {
+      const modal = document.getElementById('search-modal');
+      if (show) {
+        modal.classList.remove('hidden');
+        setTimeout(() => document.getElementById('search-input').focus(), 50);
+      } else {
+        modal.classList.add('hidden');
+      }
+    }
+
+    function executeSearch(query) {
+      const container = document.getElementById('search-results-list');
+      const q = query.trim().toLowerCase();
+      if (!q) {
+        container.innerHTML = '<div class="p-4 text-center text-xs text-slate-400">Type a keyword to explore cross-framework connections...</div>';
+        return;
+      }
+
+      let matches = [];
+      Object.keys(DEEP_DIVES_DATA).forEach(key => {
+        const item = DEEP_DIVES_DATA[key];
+        const matchTitle = item.title.toLowerCase().includes(q);
+        const matchSummary = item.summary.toLowerCase().includes(q);
+        let matchSections = item.sections.some(s => s.heading.toLowerCase().includes(q) || s.content.toLowerCase().includes(q));
+
+        if (matchTitle || matchSummary || matchSections) {
+          matches.push({ key, item });
+        }
+      });
+
+      if (matches.length === 0) {
+        container.innerHTML = `<div class="p-4 text-center text-xs text-slate-400">No matching frameworks found for "${query}"</div>`;
+        return;
+      }
+
+      let html = '';
+      matches.forEach(({ key, item }) => {
+        html += `
+          <div onclick="openDeepDive('${key}'); toggleSearchModal(false);" class="p-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl cursor-pointer transition flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">${item.category}</span>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">${item.title}</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">${item.summary}</p>
+            </div>
+            <i class="fa-solid fa-chevron-right text-slate-400 text-xs ml-3"></i>
+          </div>
+        `;
+      });
+      container.innerHTML = html;
+    }
+
+    // Keyboard shortcut CMD+K or CTRL+K
+    window.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        toggleSearchModal(true);
+      }
+      if (e.key === 'Escape') {
+        toggleSearchModal(false);
+        closeDeepDiveModal();
+      }
+    });
+
+    // --- DEEP DIVE CATEGORY FILTER ---
+    function filterDeepDives(category) {
+      const cards = document.querySelectorAll('.deepdive-card');
+      const tabs = document.querySelectorAll('#deepdive-filter-tabs .deep-tab');
+      
+      tabs.forEach(tab => {
+        tab.classList.remove('bg-sky-600', 'text-white');
+        tab.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+      });
+      event.currentTarget.classList.add('bg-sky-600', 'text-white');
+      event.currentTarget.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // --- AUDIT SCORING CALCULATION ---
+    function updateAuditScore() {
+      const inputs = document.querySelectorAll('#audit-questions-container input[type="range"]');
+      let sum = 0;
+      inputs.forEach((input, index) => {
+        const val = parseInt(input.value, 10);
+        sum += val;
+        document.getElementById(`score-val-${index + 1}`).innerText = `${val} / 5`;
+      });
+
+      const display = document.getElementById('audit-score-display');
+      const grade = document.getElementById('audit-grade');
+      const feedback = document.getElementById('audit-feedback-text');
+      display.innerText = `${sum} / 35`;
+
+      if (sum >= 30) {
+        grade.innerText = "Multiplying Movement Leader";
+        feedback.innerText = "Exceptional vitality and multiplication cadence! Your primary mandate now is guarding Sabbath rest and mentoring the next generation of elders and movement catalysts.";
+      } else if (sum >= 22) {
+        grade.innerText = "Developing Integrated Leader";
+        feedback.innerText = "Solid foundational awareness. Your strategic leverage point is shifting from personal addition (Maxwell's Law of Process) to reproducible 3/3rds peer discipleship (Big.Life & Multiply) and daily 5M Mantras.";
+      } else {
+        grade.innerText = "Critical Renewal Urgently Needed";
+        feedback.innerText = "You are likely operating in severe operational or emotional depletion. Prioritize the Fully Alive T.R.A.I.N. process: Target the key tension, activate the 5 Mantras, and re-integrate your 5W Wholeness before launching new public initiatives.";
+      }
+    }
+
+    // --- TOAST NOTIFICATION UTILITY ---
+    function showToast(msg) {
+      const toast = document.getElementById('toast-message');
+      const text = document.getElementById('toast-text');
+      text.innerText = msg;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3000);
+    }
+
+    // --- DARK MODE TOGGLE ---
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      const icon = document.getElementById('theme-icon');
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        icon.className = "fa-solid fa-moon";
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.add('dark');
+        icon.className = "fa-solid fa-sun text-amber-400";
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    // Mobile nav toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-nav');
+      menu.classList.toggle('hidden');
+    }
+
+    // Initialize Theme
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      const icon = document.getElementById('theme-icon');
+      if (icon) icon.className = "fa-solid fa-sun text-amber-400";
+    }
+
+    // Initial audit calculation
+    updateAuditScore();
+  </script>
+</body>
+</html>
